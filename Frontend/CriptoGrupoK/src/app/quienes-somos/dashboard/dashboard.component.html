@@ -1,0 +1,18 @@
+<div class="grid-container" >
+  <h1 class="mat-h1">¿Quienes somos?</h1>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-content class="dashboard-card-content">
+          <h2 class="titulo">{{card.title}}</h2>
+          <img class="foto" [src]="card.photo" alt="dev-foto">
+          <div class="logos">
+            <a target="_blank" [href]="card.gh"><img class="logo" src="./assets/quienes-somos/Logos/github.png" alt="Github-logo"></a>
+            <a target="_blank" [href]="card.ln"><img class="logo" src="./assets/quienes-somos/Logos/linkedin.png" alt="Linkedin-logo"></a>
+            <a target="_blank" [href]="card.ig"><img class="logo" src="./assets/quienes-somos/Logos/instagram.png" alt="Instagram-logo"></a>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
