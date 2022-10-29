@@ -1,0 +1,27 @@
+<div class="container">
+ <table class="table">
+    <thead>
+        <tr>
+            <th *ngFor="let title of titles">{{title}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let coin of coins">
+            <img [src]="coin.image" alt="{{coin.name}}" style="width: 3rem;" />
+            <span>
+                {{coin.name}}
+            </span>
+            <span class="symbol">
+                {{coin.symbol}}
+            </span>
+            <td [ngClass]="coin.current_price > 0 ? 'text-success':'text-danger'">
+                Usd $ {{coin.current_price.toLocaleString()}}
+                <span class="boton">
+                    <button type="button" class="btn btn-primary">Sell</button>
+                    <button type="button" class="btn btn-secondary">Buy</button>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+ </table>
+</div>

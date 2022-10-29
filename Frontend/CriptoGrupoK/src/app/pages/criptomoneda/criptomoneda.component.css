@@ -1,0 +1,17 @@
+.container{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #3c4048;
+    font-size: large; 
+}
+.symbol{
+    display: grid;
+    justify-content:center;
+    align-items: center;
+}
+.boton{
+    display:flex;
+    justify-content: right;
+    align-items: right;
+}
+

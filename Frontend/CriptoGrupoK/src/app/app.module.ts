@@ -1,20 +1,24 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { CriptomonedaComponent } from './pages/criptomoneda/criptomoneda.component';
 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+    CriptomonedaComponent,
+    ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
-})
+  bootstrap: [AppComponent],
+  
+  })
 export class AppModule { }
