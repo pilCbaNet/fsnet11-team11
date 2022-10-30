@@ -1,0 +1,80 @@
+.grid-container {
+    padding: 20px;
+  }
+  
+  .mat-h1{  
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
+    background-color: lightcoral;
+    border-radius: 100px;
+  }
+  
+  .dashboard-card {
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    right: 50px;
+    bottom: 10px;
+    border-radius: 50px;
+    background-color: lightcoral;
+    box-shadow: 10px 10px  black;
+  }
+  
+  .dashboard-card-content {
+    text-align: center;
+    color: black;
+  }
+  
+  .titulo{
+    font-size: xx-large;
+  }
+  
+  .foto{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100px;
+    border-style: solid;
+  }
+  
+  .logos{
+   display: flex;
+   justify-content: center;
+   justify-content: space-evenly;
+   padding-top: 1rem;
+  }
+  
+  .logo{  
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  @media screen and (max-width: 600px){
+    .logo{  
+      width: 3rem;
+      height: 3rem;
+    }
+  
+    .foto{
+      width: 8rem;
+      height: 8rem;    
+    }
+    
+  }
+  
+  @media screen and (max-width: 300px){
+    .titulo{
+      font-size: x-large;
+    }
+  
+    .logo{  
+      width: 2rem;
+      height: 2rem;
+    }
+  
+    .foto{
+      width: 6rem;
+      height: 6rem;    
+    }
+    
+  }

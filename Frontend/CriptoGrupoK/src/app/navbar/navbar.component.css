@@ -1,0 +1,58 @@
+
+.navbar{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #EAEAEA;
+    border-bottom: 2px solid #B2B2B2;
+}
+
+.navbar_logoContainer{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.navbar_logo{
+    height: 80%;
+}
+
+.navbar_title{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+}
+.navbar_buttons li{
+    list-style: none;
+}
+
+.navbar_userContainer{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbar_userName{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar_userImg{
+    height: 50%;
+    border-radius: 100%;
+}

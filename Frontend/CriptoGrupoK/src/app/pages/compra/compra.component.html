@@ -1,0 +1,51 @@
+<div class="mainContainer">   
+
+    <div class="gridFormContainer">
+        <form [formGroup]="coinForm" (ngSubmit)="submit()">
+            <select name="Crypto" id="cryptoSelector" (change)="changeCoin($event)" formControlName="coinName" >
+                <option value="" disabled [defaultSelected]="true">Select Coin</option>
+                <option *ngFor="let crypto of cryptos" [ngValue]="crypto.id" >{{crypto.name}}</option>                
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+        <div class="container gridContainer">
+            <div class="row">
+                <div class="col-4 text-center bg-white cell">Cripto</div>
+                <div class="col-4 text-center bg-white cell">Price</div>
+                <div class="col-2 text-center bg-white cell">Amount</div>
+                <div class="col-2 text-center bg-white cell"></div>
+                <div id="cryptoCell" class="col-4 text-center bg-white cell">{{selectedCoin.name}}</div>
+                <div id="priceCell" class="col-4 text-center bg-white cell">{{selectedCoin.price}}</div>
+                <div id="amountCell" class="col-2 text-center bg-white cell">{{selectedCoin.amount}}</div>
+                <div class="col-2 text-center bg-white cell"><button type="button" id="buyButton" class="btn btn-primary gridButton" [disabled]="buyButtonDisabled" (click)="openFormModal()">Buy</button></div>                            
+            </div>
+        </div>        
+    </div>   
+
+</div>
+
+<div class="modal" id="buyModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Seleccione la cantidad de {{selectedCoin.name}} que desea comprar.</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form [formGroup]="buyForm" (ngSubmit)="onBuy()">
+        <div class="modal-body">
+          
+            <input type="number" id="amountToBuy" (change)="getAmount($event)" formControlName="amountToBuy"/>         
+         
+          
+          <p>saldo disponible: USD{{usd}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Comprar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+        </form>
+      </div>
+    </div>
+</div>
