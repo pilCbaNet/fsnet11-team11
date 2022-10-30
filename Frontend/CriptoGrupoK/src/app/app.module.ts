@@ -21,6 +21,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { VentaComponent } from './pages/venta/venta.component';
+import { WalletComponentComponent } from './pages/wallet/wallet.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { VentaComponent } from './pages/venta/venta.component';
     AboutUsComponent,
     LoginComponent,
     RegisterComponent,
-    VentaComponent
+    VentaComponent,
+    WalletComponentComponent
   ],
   imports: [
     BrowserModule,
