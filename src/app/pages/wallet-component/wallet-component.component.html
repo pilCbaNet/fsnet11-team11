@@ -1,0 +1,137 @@
+<div class="container px-4 text-center">
+  <div class="row gx-5">
+    <div class="col">
+      <div class="p-3 border bg-light">
+        {{ data.user.info.name }}
+      </div>
+    </div>
+    <div class="col">
+      <div class="p-3 border bg-light">Saldo Billetera expresado en USD</div>
+      <label for=""></label>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col" *ngFor="let titulos of titlesWallet">{{ titulos }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ data.user.wallet[0].crypto_id }}</td>
+        <td>{{ data.user.wallet[0].quantity }}</td>
+        <td>{{ data.user.wallet[0].cantidad_en_USD }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ data.user.wallet[1].crypto_id }}</td>
+        <td>{{ data.user.wallet[1].quantity }}</td>
+        <td>{{ data.user.wallet[1].cantidad_en_USD }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ data.user.wallet[2].crypto_id }}</td>
+        <td>{{ data.user.wallet[2].quantity }}</td>
+        <td>{{ data.user.wallet[2].cantidad_en_USD }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ data.user.wallet[3].crypto_id }}</td>
+        <td>{{ data.user.wallet[3].quantity }}</td>
+        <td>{{ data.user.wallet[3].cantidad_en_USD }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container px-4 text-center">
+  <div class="row gx-5">
+    <div class="col">
+      <div class="p-3 border bg-light">{{ data.user.info.name }}</div>
+    </div>
+    <div class="col">
+      <div class="p-3 border bg-light">
+        Movimientos Billetera expresado en USD
+      </div>
+      <label for=""></label>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col" *ngFor="let title of titlesMovements">{{ title }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{ data.user.movements[0].id_operacion }}</th>
+        <td>{{ data.user.movements[0].desde }}</td>
+        <td>{{ data.user.movements[0].hacia }}</td>
+        <td>{{ data.user.movements[0].monto_transferido_en_usd }}</td>
+        <td>
+          {{ data.user.movements[0].monto_transferido_en_crypto_de_origen }}
+        </td>
+        <td>
+          {{ data.user.movements[0].monto_transferido_en_crypto_de_destino }}
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ data.user.movements[1].id_operacion }}</th>
+        <td>{{ data.user.movements[1].desde }}</td>
+        <td>{{ data.user.movements[1].hacia }}</td>
+        <td>{{ data.user.movements[1].monto_transferido_en_usd }}</td>
+        <td>
+          {{ data.user.movements[1].monto_transferido_en_crypto_de_origen }}
+        </td>
+        <td>
+          {{ data.user.movements[1].monto_transferido_en_crypto_de_destino }}
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">{{ data.user.movements[2].id_operacion }}</th>
+        <td>{{ data.user.movements[2].desde }}</td>
+        <td>{{ data.user.movements[2].hacia }}</td>
+        <td>{{ data.user.movements[2].monto_transferido_en_usd }}</td>
+        <td>
+          {{ data.user.movements[2].monto_transferido_en_crypto_de_origen }}
+        </td>
+        <td>
+          {{ data.user.movements[2].monto_transferido_en_crypto_de_destino }}
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ data.user.movements[3].id_operacion }}</th>
+        <td>{{ data.user.movements[3].desde }}</td>
+        <td>{{ data.user.movements[3].hacia }}</td>
+        <td>{{ data.user.movements[3].monto_transferido_en_usd }}</td>
+        <td>
+          {{ data.user.movements[3].monto_transferido_en_crypto_de_origen }}
+        </td>
+        <td>
+          {{ data.user.movements[3].monto_transferido_en_crypto_de_destino }}
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ data.user.movements[4].id_operacion }}</th>
+        <td>{{ data.user.movements[4].desde }}</td>
+        <td>{{ data.user.movements[4].hacia }}</td>
+        <td>{{ data.user.movements[4].monto_transferido_en_usd }}</td>
+        <td>
+          {{ data.user.movements[4].monto_transferido_en_crypto_de_origen }}
+        </td>
+        <td>
+          {{ data.user.movements[4].monto_transferido_en_crypto_de_destino }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

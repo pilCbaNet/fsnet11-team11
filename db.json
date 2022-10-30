@@ -1,0 +1,99 @@
+{
+  "data": {
+    "user": {
+      "info": {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john.due@gmail.com",
+        "password": "contrasena123"
+      },
+      "movements": [
+        {
+          "id_operacion": 260,
+          "desde": "USDT",
+          "hacia": "Bitcoin",
+          "monto_transferido_en_usd": 8,
+          "monto_transferido_en_crypto_de_origen": 6,
+          "monto_transferido_en_crypto_de_destino": 3
+        },
+        {
+          "id_operacion": 154,
+          "desde": "USDT",
+          "hacia": "Solana",
+          "monto_transferido_en_usd": 4,
+          "monto_transferido_en_crypto_de_origen": 10,
+          "monto_transferido_en_crypto_de_destino": 1.05
+        },
+        {
+          "id_operacion": 320,
+          "desde": "DAI",
+          "hacia": "Ethereum",
+          "monto_transferido_en_usd": 9,
+          "monto_transferido_en_crypto_de_origen": 5.08,
+          "monto_transferido_en_crypto_de_destino": 10
+        },
+        {
+          "id_operacion": 541,
+          "desde": "Ethereum",
+          "hacia": "USDT",
+          "monto_transferido_en_usd": 3.2,
+          "monto_transferido_en_crypto_de_origen": 40,
+          "monto_transferido_en_crypto_de_destino": 19
+        },
+        {
+          "id_operacion": 506,
+          "desde": "Bitcoin",
+          "hacia": "USDT",
+          "monto_transferido_en_usd": 12.05,
+          "monto_transferido_en_crypto_de_origen": 2,
+          "monto_transferido_en_crypto_de_destino": 5.5
+        }
+      ],
+      "wallet": [
+        {
+          "crypto_id": "BTC",
+          "quantity": 0.1,
+          "cantidad_en_USD": 12000
+        },
+        {
+          "crypto_id": "ETH",
+          "quantity": 4.3,
+          "cantidad_en_USD": 3000
+        },
+        {
+          "crypto_id": "SOL",
+          "quantity": 0.5,
+          "cantidad_en_USD": 8000
+        },
+        {
+          "crypto_id": "DAI",
+          "quantity": 1.7,
+          "cantidad_en_USD": 3000
+        }
+      ]
+    },
+
+    "crypto": [
+      {
+        "id": "1",
+        "name": "Bitcoin",
+        "price": 20000
+      },
+      {
+        "id": "2",
+        "name": "DAI",
+        "price": 1
+      },
+      {
+        "id": "3",
+        "name": "Solana",
+        "price": 28
+      },
+      {
+        "id": "4",
+        "name": "Ethereum",
+        "price": 1308
+      }
+    ]
+  }
+}
