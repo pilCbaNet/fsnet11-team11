@@ -36,8 +36,11 @@
 }
 .navbar_buttons li{
     list-style: none;
+    color: #EAEAEA;
 }
-
+.navbar_buttons li a{
+    color: #EAEAEA;
+}
 .navbar_userContainer{
     height: 100%;
     width: 15%;

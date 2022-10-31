@@ -81,7 +81,7 @@ export class CompraComponent implements OnInit {
   ngOnInit(): void {
     this.miServicioCompra.obtenerDataClient().subscribe(data=>{      
       this.cryptos = data.crypto;
-      this.user = data.user;
+      this.user = data.users[0].user;
       this.usd = this.user.wallet.usd
     })
     this.formModal = new window.bootstrap.Modal(

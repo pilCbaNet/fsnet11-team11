@@ -18,10 +18,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
-import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
+
 import { VentaComponent } from './pages/venta/venta.component';
 import { WalletComponentComponent } from './pages/wallet/wallet.component';
+import { LoginComponent } from './auth/pages/login/login.component';
+import { MainComponent } from './auth/pages/main/main.component';
+import { RegisterComponent } from './auth/pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,11 @@ import { WalletComponentComponent } from './pages/wallet/wallet.component';
     CompraComponent,
     CryptoListComponent,
     AboutUsComponent,
-    LoginComponent,
-    RegisterComponent,
     VentaComponent,
-    WalletComponentComponent
+    WalletComponentComponent,
+    LoginComponent,
+    MainComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

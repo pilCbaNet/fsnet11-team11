@@ -62,19 +62,19 @@ export class VentaComponent implements OnInit {
       return
     }
 
-    this.postData = {user:this.user,crypto:this.cryptos};
+    this.postData = {users:[this.user],crypto:this.cryptos};
     let num: Number;
-    if(this.postData.user.wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!= undefined){
-      num = this.postData.user.wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!.quantity
+    if(this.postData.users[0].wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!= undefined){
+      num = this.postData.users[0].wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!.quantity
       
       if(parseFloat(JSON.stringify(num))-parseFloat(this.buyForm.value.amountToBuy!)<0){
         alert("no tiene suficientes fondos para realizar esa operación")
         return
       }
-      this.postData.user.wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!.quantity = parseFloat(JSON.stringify(num))-parseFloat(this.buyForm.value.amountToBuy!)
+      this.postData.users[0].wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!.quantity = parseFloat(JSON.stringify(num))-parseFloat(this.buyForm.value.amountToBuy!)
     }
     
-    this.postData.user.wallet.usd = parseFloat(JSON.stringify(this.postData.user.wallet.usd)) + parseFloat(this.buyForm.value.amountToBuy!)* parseFloat(JSON.stringify(this.selectedCoin.price))
+    this.postData.users[0].wallet.usd = parseFloat(JSON.stringify(this.postData.users[0].wallet.usd)) + parseFloat(this.buyForm.value.amountToBuy!)* parseFloat(JSON.stringify(this.selectedCoin.price))
     
     this.usd = this.user.wallet.usd;
 
@@ -85,7 +85,7 @@ export class VentaComponent implements OnInit {
   ngOnInit(): void {
     this.miServicioCompra.obtenerDataClient().subscribe(data=>{      
       this.cryptos = data.crypto;
-      this.user = data.user;
+      this.user = data.users[0];
       this.usd = this.user.wallet.usd
       
     })
@@ -128,6 +128,6 @@ interface SelectedCoin{
 }
 
 interface PostData{
-  user:UserInterface;
+  users:Array<UserInterface>;
   crypto:Array<CryptosInterface>;
 }
