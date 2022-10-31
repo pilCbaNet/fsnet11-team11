@@ -81,7 +81,7 @@ export class CompraComponent implements OnInit {
   ngOnInit(): void {
     this.miServicioCompra.obtenerDataClient().subscribe(data=>{      
       this.cryptos = data.crypto;
-      this.user = data.users[0].user;
+      this.user = data.users[0];
       this.usd = this.user.wallet.usd
     })
     this.formModal = new window.bootstrap.Modal(
@@ -99,9 +99,10 @@ export class CompraComponent implements OnInit {
     if (!this.coinForm.valid) {
       false;
     } else {
-      if(this.coinForm.value.coinName!=null){
+      if(this.coinForm.value.coinName != null){
         let num: Number = parseInt(this.coinForm.value.coinName)
         let coin: any =  this.cryptos.find(c=>c.id==num);
+        console.log(this.user)
         let userCoin: any = this.user.wallet.crypto.find(c=>c.crypto_id==num);
         this.selectedCoin.id = num;
         this.selectedCoin.name = coin.name;
