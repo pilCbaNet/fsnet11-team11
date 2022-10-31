@@ -2,7 +2,7 @@
     <div class="row gx-5">
       <div class="col">
         <div class="p-3 border bg-light">
-          {{ data.user.info.name }}
+          {{ data.users[0].info.name }}
         </div>
       </div>
       <div class="col">
@@ -21,27 +21,27 @@
       </thead>
       <tbody>
         <tr>
-          <td>{{ data.user.wallet.crypto[0].name }}</td>
-          <td>{{ data.user.wallet.crypto[0].quantity }}</td>
-          <td>{{ data.user.wallet.crypto[0].cantidad_en_USD }}</td>
+          <td>{{ data.users[0].wallet.crypto[0].name }}</td>
+          <td>{{ data.users[0].wallet.crypto[0].quantity }}</td>
+          <td></td>
         </tr>
   
         <tr>
-          <td>{{ data.user.wallet.crypto[1].name }}</td>
-          <td>{{ data.user.wallet.crypto[1].quantity }}</td>
-          <td>{{ data.user.wallet.crypto[1].cantidad_en_USD }}</td>
+          <td>{{ data.users[0].wallet.crypto[1].name }}</td>
+          <td>{{ data.users[0].wallet.crypto[1].quantity }}</td>
+          <td></td>
         </tr>
   
         <tr>
-          <td>{{ data.user.wallet.crypto[2].name }}</td>
-          <td>{{ data.user.wallet.crypto[2].quantity }}</td>
-          <td>{{ data.user.wallet.crypto[2].cantidad_en_USD }}</td>
+          <td>{{ data.users[0].wallet.crypto[2].name }}</td>
+          <td>{{ data.users[0].wallet.crypto[2].quantity }}</td>
+          <td></td>
         </tr>
   
         <tr>
-          <td>{{ data.user.wallet.crypto[3].name }}</td>
-          <td>{{ data.user.wallet.crypto[3].quantity }}</td>
-          <td>{{ data.user.wallet.crypto[3].cantidad_en_USD }}</td>
+          <td>{{ data.users[0].wallet.crypto[3].name }}</td>
+          <td>{{ data.users[0].wallet.crypto[3].quantity }}</td>
+          <td></td>
         </tr>
       </tbody>
     </table>
@@ -50,7 +50,7 @@
   <div class="container px-4 text-center">
     <div class="row gx-5">
       <div class="col">
-        <div class="p-3 border bg-light">{{ data.user.info.name }}</div>
+        <div class="p-3 border bg-light">{{ data.users[0].info.name }}</div>
       </div>
       <div class="col">
         <div class="p-3 border bg-light">
@@ -70,66 +70,66 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row">{{ data.user.movements[0].id_operacion }}</th>
-          <td>{{ data.user.movements[0].desde }}</td>
-          <td>{{ data.user.movements[0].hacia }}</td>
-          <td>{{ data.user.movements[0].monto_transferido_en_usd }}</td>
+          <th scope="row">{{ data.users[0].movements[0].id_operacion }}</th>
+          <td>{{ data.users[0].movements[0].desde }}</td>
+          <td>{{ data.users[0].movements[0].hacia }}</td>
+          <td>{{ data.users[0].movements[0].monto_transferido_en_usd }}</td>
           <td>
-            {{ data.user.movements[0].monto_transferido_en_crypto_de_origen }}
+            {{ data.users[0].movements[0].monto_transferido_en_crypto_de_origen }}
           </td>
           <td>
-            {{ data.user.movements[0].monto_transferido_en_crypto_de_destino }}
-          </td>
-        </tr>
-  
-        <tr>
-          <th scope="row">{{ data.user.movements[1].id_operacion }}</th>
-          <td>{{ data.user.movements[1].desde }}</td>
-          <td>{{ data.user.movements[1].hacia }}</td>
-          <td>{{ data.user.movements[1].monto_transferido_en_usd }}</td>
-          <td>
-            {{ data.user.movements[1].monto_transferido_en_crypto_de_origen }}
-          </td>
-          <td>
-            {{ data.user.movements[1].monto_transferido_en_crypto_de_destino }}
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">{{ data.user.movements[2].id_operacion }}</th>
-          <td>{{ data.user.movements[2].desde }}</td>
-          <td>{{ data.user.movements[2].hacia }}</td>
-          <td>{{ data.user.movements[2].monto_transferido_en_usd }}</td>
-          <td>
-            {{ data.user.movements[2].monto_transferido_en_crypto_de_origen }}
-          </td>
-          <td>
-            {{ data.user.movements[2].monto_transferido_en_crypto_de_destino }}
+            {{ data.users[0].movements[0].monto_transferido_en_crypto_de_destino }}
           </td>
         </tr>
   
         <tr>
-          <th scope="row">{{ data.user.movements[3].id_operacion }}</th>
-          <td>{{ data.user.movements[3].desde }}</td>
-          <td>{{ data.user.movements[3].hacia }}</td>
-          <td>{{ data.user.movements[3].monto_transferido_en_usd }}</td>
+          <th scope="row">{{ data.users[0].movements[1].id_operacion }}</th>
+          <td>{{ data.users[0].movements[1].desde }}</td>
+          <td>{{ data.users[0].movements[1].hacia }}</td>
+          <td>{{ data.users[0].movements[1].monto_transferido_en_usd }}</td>
           <td>
-            {{ data.user.movements[3].monto_transferido_en_crypto_de_origen }}
+            {{ data.users[0].movements[1].monto_transferido_en_crypto_de_origen }}
           </td>
           <td>
-            {{ data.user.movements[3].monto_transferido_en_crypto_de_destino }}
+            {{ data.users[0].movements[1].monto_transferido_en_crypto_de_destino }}
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">{{ data.users[0].movements[2].id_operacion }}</th>
+          <td>{{ data.users[0].movements[2].desde }}</td>
+          <td>{{ data.users[0].movements[2].hacia }}</td>
+          <td>{{ data.users[0].movements[2].monto_transferido_en_usd }}</td>
+          <td>
+            {{ data.users[0].movements[2].monto_transferido_en_crypto_de_origen }}
+          </td>
+          <td>
+            {{ data.users[0].movements[2].monto_transferido_en_crypto_de_destino }}
           </td>
         </tr>
   
         <tr>
-          <th scope="row">{{ data.user.movements[4].id_operacion }}</th>
-          <td>{{ data.user.movements[4].desde }}</td>
-          <td>{{ data.user.movements[4].hacia }}</td>
-          <td>{{ data.user.movements[4].monto_transferido_en_usd }}</td>
+          <th scope="row">{{ data.users[0].movements[3].id_operacion }}</th>
+          <td>{{ data.users[0].movements[3].desde }}</td>
+          <td>{{ data.users[0].movements[3].hacia }}</td>
+          <td>{{ data.users[0].movements[3].monto_transferido_en_usd }}</td>
           <td>
-            {{ data.user.movements[4].monto_transferido_en_crypto_de_origen }}
+            {{ data.users[0].movements[3].monto_transferido_en_crypto_de_origen }}
           </td>
           <td>
-            {{ data.user.movements[4].monto_transferido_en_crypto_de_destino }}
+            {{ data.users[0].movements[3].monto_transferido_en_crypto_de_destino }}
+          </td>
+        </tr>
+  
+        <tr>
+          <th scope="row">{{ data.users[0].movements[4].id_operacion }}</th>
+          <td>{{ data.users[0].movements[4].desde }}</td>
+          <td>{{ data.users[0].movements[4].hacia }}</td>
+          <td>{{ data.users[0].movements[4].monto_transferido_en_usd }}</td>
+          <td>
+            {{ data.users[0].movements[4].monto_transferido_en_crypto_de_origen }}
+          </td>
+          <td>
+            {{ data.users[0].movements[4].monto_transferido_en_crypto_de_destino }}
           </td>
         </tr>
       </tbody>

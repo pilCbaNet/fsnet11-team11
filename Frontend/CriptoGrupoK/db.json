@@ -13,7 +13,7 @@
             "id_operacion": 260,
             "desde": "USDT",
             "hacia": "Bitcoin",
-            "monto_transferido_en_usd": 8,
+           
             "monto_transferido_en_crypto_de_origen": 6,
             "monto_transferido_en_crypto_de_destino": 3
           },
@@ -21,7 +21,7 @@
             "id_operacion": 154,
             "desde": "USDT",
             "hacia": "Solana",
-            "monto_transferido_en_usd": 4,
+            
             "monto_transferido_en_crypto_de_origen": 10,
             "monto_transferido_en_crypto_de_destino": 1.05
           },
@@ -29,7 +29,7 @@
             "id_operacion": 320,
             "desde": "DAI",
             "hacia": "Ethereum",
-            "monto_transferido_en_usd": 9,
+           
             "monto_transferido_en_crypto_de_origen": 5.08,
             "monto_transferido_en_crypto_de_destino": 10
           },
@@ -37,7 +37,7 @@
             "id_operacion": 541,
             "desde": "Ethereum",
             "hacia": "USDT",
-            "monto_transferido_en_usd": 3.2,
+            
             "monto_transferido_en_crypto_de_origen": 40,
             "monto_transferido_en_crypto_de_destino": 19
           },
@@ -45,7 +45,7 @@
             "id_operacion": 506,
             "desde": "Bitcoin",
             "hacia": "USDT",
-            "monto_transferido_en_usd": 12.05,
+            
             "monto_transferido_en_crypto_de_origen": 2,
             "monto_transferido_en_crypto_de_destino": 5.5
           }
