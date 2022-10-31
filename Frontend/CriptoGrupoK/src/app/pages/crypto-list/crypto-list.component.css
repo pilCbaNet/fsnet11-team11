@@ -1,4 +1,4 @@
-.container{
+.container-cotizaciones{
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: large;
@@ -8,12 +8,15 @@
     align-items: center;
     height: 85vh;
     width: 85vw;
-    padding-left: 15vw;    
+    opacity: 0.7;        
 }
 
+h1{
+    font-size: 1.8em;
+}
 .card{
     border: 1px solid white;
-    width: 90%;
+    width: 70%;
     height: 70%;
     display: flex;
     justify-content: center;
@@ -27,8 +30,13 @@ tr{
     padding-bottom: 100%;
 }
 
-.boton{
-    display:flex;
-    justify-content: right;
-    align-items: right;
+.buySellButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    margin-left: 2rem;
 }

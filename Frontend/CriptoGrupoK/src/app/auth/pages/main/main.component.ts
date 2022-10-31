@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CompraServiceService } from 'src/app/services/compra-service.service';
 
 @Component({
   selector: 'app-main',
@@ -8,9 +9,14 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
 
-  constructor(private router:Router) { }
+saldo:any;
+
+  constructor(private router:Router,private getSaldo: CompraServiceService) { }
 
   ngOnInit(): void {
+    this.getSaldo.obtenerDataClient().subscribe(data=>{
+      this.saldo=data.users[0].wallet.usd;
+    })
   }
 
   navigateTo(ev :String){

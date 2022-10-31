@@ -1,4 +1,4 @@
-.mainContainer{
+.CompraContainer{
     width: 85vw;
     height:85vh;
     display:flex;
@@ -15,9 +15,10 @@
     height:70%;
     border: 1px solid white;
     border-radius: 30px;
-    margin-left: 15%;
+    margin-top: 10%;
     margin-bottom: 10%; 
-    background-color: white;   
+    background-color: white;  
+    opacity: 0.85; 
 }
 
 .gridFormContainer form{
@@ -58,5 +59,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+ .modalSaldo{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 1rem;
+ }
+.modalTitulo{
+    font-size: 1.2rem;
+    font-weight: 400;
+    
 }
 

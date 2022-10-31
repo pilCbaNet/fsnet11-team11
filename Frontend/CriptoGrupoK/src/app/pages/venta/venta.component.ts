@@ -99,6 +99,9 @@ export class VentaComponent implements OnInit {
   openFormModal() {
     this.formModal.show();
   }
+  cerrarModal(){
+    this.formModal.hide()
+  }
   submit():void{    
     
     this.isSubmitted = true;
@@ -113,12 +116,13 @@ export class VentaComponent implements OnInit {
         this.selectedCoin.name = coin.name;
         this.selectedCoin.price = coin.price;
         this.selectedCoin.amount = userCoin.quantity;
+        this.buyButtonDisabled = false;
       }
       else{
         alert("debe ingresar una opcion")
       }      
     }
-    this.buyButtonDisabled = false;
+    
   }
 
 }

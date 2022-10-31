@@ -7,7 +7,7 @@
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   background-repeat: no-repeat;
   background-position: center;
@@ -49,3 +49,15 @@
   background-color: #7b8392;
 }
 
+.saldo-container{
+  display: flex;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex-direction: column;
+  color: white;
+  padding-right: 10%;
+}
+.saldo-container h3{
+  
+}

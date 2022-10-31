@@ -23,6 +23,7 @@ import { WalletComponentComponent } from './pages/wallet/wallet.component';
 import { LoginComponent } from './auth/pages/login/login.component';
 import { MainComponent } from './auth/pages/main/main.component';
 import { RegisterComponent } from './auth/pages/register/register.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { RegisterComponent } from './auth/pages/register/register.component';
     WalletComponentComponent,
     LoginComponent,
     MainComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

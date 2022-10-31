@@ -6,7 +6,7 @@
             <ul class="navbar_buttons">
 
                 <li class="linkLi" (click)="navigateTo('wallet')">
-                    My Wallet
+                    Mi Billetera
                 </li>
             
                 <li class="linkLi" (click)="navigateTo('cotizaciones')">
@@ -14,10 +14,13 @@
                 </li>
                
                 <li class="linkLi" (click)="navigateTo('about-us')">
-                    About Us
+                    Quienes Somos
                 </li>
             </ul>
-            
+            <div class="saldo-container">
+                <h3>Saldo:</h3>
+                <p>${{saldo}}</p>
+            </div>
         </div>
         <router-outlet></router-outlet>
     </div>

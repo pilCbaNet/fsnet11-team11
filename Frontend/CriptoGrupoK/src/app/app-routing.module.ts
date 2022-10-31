@@ -6,6 +6,7 @@ import { RegisterComponent } from './auth/pages/register/register.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { CompraComponent } from './pages/compra/compra.component';
 import { CryptoListComponent } from './pages/crypto-list/crypto-list.component';
+import { HomeComponent } from './pages/home/home.component';
 import { VentaComponent } from './pages/venta/venta.component';
 import { WalletComponentComponent } from './pages/wallet/wallet.component';
 
@@ -18,11 +19,12 @@ children:[
   {path: 'about-us', component:AboutUsComponent},
   {path: 'venta', component:VentaComponent},
   {path: 'wallet', component:WalletComponentComponent},
+  {path: 'landing',component: HomeComponent}
 ]},  
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent}, 
   {path:"", redirectTo:"login", pathMatch:'full'},
-  {path:"**", redirectTo:"home", pathMatch:'full'}
+  {path:"**", redirectTo:"home/landing", pathMatch:'full'}
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CompraServiceService } from '../services/compra-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  usuario!:String;
+
+  constructor(private getUsuario:CompraServiceService) { }
 
   ngOnInit(): void {
+    this.getUsuario.obtenerDataClient().subscribe(data=>{
+      this.usuario = data.users[0].info.name;
+    })
   }
 
 }

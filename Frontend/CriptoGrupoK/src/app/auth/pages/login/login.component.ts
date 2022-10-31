@@ -49,16 +49,18 @@ export class LoginComponent implements OnInit {
   submit(){
     try{
       let existentUser = this.users.find(c=>c.info.email === this.loginForm.value.loginMail)
+      
       if(existentUser!==undefined){
         if(existentUser.info.password === this.loginForm.value.loginPass){
-          this.router.navigate(["home"])
+          this.router.navigate(["home/landing"])
           return
         }
       }  
       alert("Los datos proporcionados no se correponden con ningún usuario registrado.")
     }
     catch(e){
-      alert("A ocurrido un error")
+      
+      alert("Los datos proporcionados no se correponden con ningún usuario registrado.")
     }    
     
   }

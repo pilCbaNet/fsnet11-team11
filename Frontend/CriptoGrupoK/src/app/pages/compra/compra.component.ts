@@ -110,14 +110,18 @@ export class CompraComponent implements OnInit {
         this.selectedCoin.name = coin.name;
         this.selectedCoin.price = coin.price;
         this.selectedCoin.amount = userCoin.quantity;
+        this.buyButtonDisabled = false;
       }
       else{
         alert("debe ingresar una opcion")
       }      
     }
-    this.buyButtonDisabled = false;
+    
   }
 
+  cerrarModal(){
+    this.formModal.hide();
+  }
   
 }
 
