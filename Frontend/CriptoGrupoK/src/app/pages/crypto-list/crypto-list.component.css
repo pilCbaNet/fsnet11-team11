@@ -1,14 +1,14 @@
 .container{
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #3c4048;
     font-size: large;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;    
+    height: 85vh;
+    width: 85vw;
+    padding-left: 15vw;    
 }
 
 .card{

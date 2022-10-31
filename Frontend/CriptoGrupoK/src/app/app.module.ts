@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
 import { CompraComponent } from './pages/compra/compra.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CryptoListComponent } from './pages/crypto-list/crypto-list.component';
@@ -29,7 +28,6 @@ import { RegisterComponent } from './auth/pages/register/register.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent,
     CompraComponent,
     CryptoListComponent,
     AboutUsComponent,

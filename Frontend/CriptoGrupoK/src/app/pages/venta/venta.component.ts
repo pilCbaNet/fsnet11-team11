@@ -16,6 +16,7 @@ export class VentaComponent implements OnInit {
   buyButtonDisabled:boolean = true;
   cryptos! : Array<CryptosInterface>;
   user! : UserInterface;
+  users! :UserInterface[];
   usd!:Number;
   postData!: PostData;
   coinName: any; 
@@ -62,7 +63,7 @@ export class VentaComponent implements OnInit {
       return
     }
 
-    this.postData = {users:[this.user],crypto:this.cryptos};
+    this.postData = {users:this.users,crypto:this.cryptos};
     let num: Number;
     if(this.postData.users[0].wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!= undefined){
       num = this.postData.users[0].wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!.quantity
@@ -86,6 +87,7 @@ export class VentaComponent implements OnInit {
     this.miServicioCompra.obtenerDataClient().subscribe(data=>{      
       this.cryptos = data.crypto;
       this.user = data.users[0];
+      this.users = data.users;
       this.usd = this.user.wallet.usd
       
     })

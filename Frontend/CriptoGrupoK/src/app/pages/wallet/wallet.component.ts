@@ -28,7 +28,7 @@ export class WalletComponentComponent implements OnInit {
 
   ngOnInit(): void {
     this.miServicioWallet.obtenerDataClient().subscribe((data) => {
-      console.log(data);
+      
       this.data = data;
     });
   }

@@ -10,12 +10,15 @@ import { VentaComponent } from './pages/venta/venta.component';
 import { WalletComponentComponent } from './pages/wallet/wallet.component';
 
 const routes: Routes = [
+  
+  {path:"home", component:MainComponent,
+children:[
   {path: 'comprar', component:CompraComponent},
-  {path: 'show-crypto', component:CryptoListComponent},
+  {path: 'cotizaciones', component:CryptoListComponent},
   {path: 'about-us', component:AboutUsComponent},
   {path: 'venta', component:VentaComponent},
   {path: 'wallet', component:WalletComponentComponent},
-  {path:"home", component:MainComponent},  
+]},  
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent}, 
   {path:"", redirectTo:"login", pathMatch:'full'},

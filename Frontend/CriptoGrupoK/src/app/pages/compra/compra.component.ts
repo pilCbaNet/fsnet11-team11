@@ -17,6 +17,7 @@ export class CompraComponent implements OnInit {
   buyButtonDisabled:boolean = true;
   cryptos! : Array<CryptosInterface>;
   user! : UserInterface;
+  users!:UserInterface[];
   usd!:Number;
   postData!: PostData;
   coinName: any; 
@@ -58,19 +59,19 @@ export class CompraComponent implements OnInit {
 
   onBuy(){
 
-    if(parseFloat(JSON.stringify(this.user.wallet.usd))<parseFloat(JSON.stringify(this.selectedCoin.price))*parseFloat(this.buyForm.value.amountToBuy!)){
+    if(parseFloat(JSON.stringify(this.users[0].wallet.usd))<parseFloat(JSON.stringify(this.selectedCoin.price))*parseFloat(this.buyForm.value.amountToBuy!)){
       alert("no tiene suficientes fondos para realizar esa operación")
       return
     }
 
-    this.postData = {user:this.user,crypto:this.cryptos};
+    this.postData = {users:this.users,crypto:this.cryptos};
     let num: Number;
-    if(this.postData.user.wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!= undefined){
-      num = this.postData.user.wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!.quantity
-      this.postData.user.wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!.quantity = parseFloat(JSON.stringify(num))+parseFloat(this.buyForm.value.amountToBuy!)
+    if(this.postData.users[0].wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!= undefined){
+      num = this.postData.users[0].wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!.quantity
+      this.postData.users[0].wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!.quantity = parseFloat(JSON.stringify(num))+parseFloat(this.buyForm.value.amountToBuy!)
     }
     
-    this.postData.user.wallet.usd = parseFloat(JSON.stringify(this.postData.user.wallet.usd)) - parseFloat(this.buyForm.value.amountToBuy!)* parseFloat(JSON.stringify(this.selectedCoin.price))
+    this.postData.users[0].wallet.usd = parseFloat(JSON.stringify(this.postData.users[0].wallet.usd)) - parseFloat(this.buyForm.value.amountToBuy!)* parseFloat(JSON.stringify(this.selectedCoin.price))
     
     this.usd = this.user.wallet.usd;
 
@@ -82,6 +83,7 @@ export class CompraComponent implements OnInit {
     this.miServicioCompra.obtenerDataClient().subscribe(data=>{      
       this.cryptos = data.crypto;
       this.user = data.users[0];
+      this.users = data.users;
       this.usd = this.user.wallet.usd
     })
     this.formModal = new window.bootstrap.Modal(
@@ -127,6 +129,6 @@ interface SelectedCoin{
 }
 
 interface PostData{
-  user:UserInterface;
+  users:UserInterface[];
   crypto:Array<CryptosInterface>;
 }

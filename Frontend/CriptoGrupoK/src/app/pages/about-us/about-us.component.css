@@ -1,5 +1,9 @@
 .grid-container {
     padding: 20px;
+    width: 85vw;
+    height: 85vh;
+    margin-left: 15vw;
+    overflow-y: scroll;
   }
   
   .mat-h1{  

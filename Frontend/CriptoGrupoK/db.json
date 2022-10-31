@@ -1,75 +1,217 @@
 {
   "data": {
-    "user": {
-      "info": {
-        "id": 1,
-        "name": "John Doe",
-        "email": "pepe@gmail.com",
-        "password": "12345678"
-      },
-      "movements": [
-        {
-          "id_operacion": 260,
-          "desde": "USDT",
-          "hacia": "Bitcoin",
-          "monto_transferido_en_crypto_de_origen": 6,
-          "monto_transferido_en_crypto_de_destino": 3
+    "users": [
+      {
+        "info": {
+          "id": 1,
+          "name": "John Doe",
+          "email": "pepe@gmail.com",
+          "password": "12345678"
         },
-        {
-          "id_operacion": 154,
-          "desde": "USDT",
-          "hacia": "Solana",
-          "monto_transferido_en_crypto_de_origen": 10,
-          "monto_transferido_en_crypto_de_destino": 1.05
-        },
-        {
-          "id_operacion": 320,
-          "desde": "DAI",
-          "hacia": "Ethereum",
-          "monto_transferido_en_crypto_de_origen": 5.08,
-          "monto_transferido_en_crypto_de_destino": 10
-        },
-        {
-          "id_operacion": 541,
-          "desde": "Ethereum",
-          "hacia": "USDT",
-          "monto_transferido_en_crypto_de_origen": 40,
-          "monto_transferido_en_crypto_de_destino": 19
-        },
-        {
-          "id_operacion": 506,
-          "desde": "Bitcoin",
-          "hacia": "USDT",
-          "monto_transferido_en_crypto_de_origen": 2,
-          "monto_transferido_en_crypto_de_destino": 5.5
-        }
-      ],
-      "wallet": {
-        "usd": 100000,
-        "crypto": [
+        "movements": [
           {
-            "crypto_id": 1,
-            "name": "Bitcoin",
-            "quantity": 5
+            "id_operacion": 260,
+            "desde": "USDT",
+            "hacia": "Bitcoin",
+            "monto_transferido_en_crypto_de_origen": 6,
+            "monto_transferido_en_crypto_de_destino": 3
           },
           {
-            "crypto_id": 2,
-            "name": "DAI",
-            "quantity": 5
+            "id_operacion": 154,
+            "desde": "USDT",
+            "hacia": "Solana",
+            "monto_transferido_en_crypto_de_origen": 10,
+            "monto_transferido_en_crypto_de_destino": 1.05
           },
           {
-            "crypto_id": 3,
-            "name": "Solana",
-            "quantity": 5
+            "id_operacion": 320,
+            "desde": "DAI",
+            "hacia": "Ethereum",
+            "monto_transferido_en_crypto_de_origen": 5.08,
+            "monto_transferido_en_crypto_de_destino": 10
           },
           {
-            "crypto_id": 4,
-            "name": "Ethereum",
-            "quantity": 5
+            "id_operacion": 541,
+            "desde": "Ethereum",
+            "hacia": "USDT",
+            "monto_transferido_en_crypto_de_origen": 40,
+            "monto_transferido_en_crypto_de_destino": 19
+          },
+          {
+            "id_operacion": 506,
+            "desde": "Bitcoin",
+            "hacia": "USDT",
+            "monto_transferido_en_crypto_de_origen": 2,
+            "monto_transferido_en_crypto_de_destino": 5.5
           }
-        ]
+        ],
+        "wallet": {
+          "usd": 110000,
+          "crypto": [
+            {
+              "crypto_id": 1,
+              "name": "Bitcoin",
+              "quantity": 4
+            },
+            {
+              "crypto_id": 2,
+              "name": "DAI",
+              "quantity": 5
+            },
+            {
+              "crypto_id": 3,
+              "name": "Solana",
+              "quantity": 5
+            },
+            {
+              "crypto_id": 4,
+              "name": "Ethereum",
+              "quantity": 5
+            }
+          ]
+        }
+      },
+      {
+        "info": {
+          "id": 1,
+          "name": "John Doe",
+          "email": "juan@gmail.com",
+          "password": "12345678"
+        },
+        "movements": [
+          {
+            "id_operacion": 260,
+            "desde": "USDT",
+            "hacia": "Bitcoin",
+            "monto_transferido_en_crypto_de_origen": 6,
+            "monto_transferido_en_crypto_de_destino": 3
+          },
+          {
+            "id_operacion": 154,
+            "desde": "USDT",
+            "hacia": "Solana",
+            "monto_transferido_en_crypto_de_origen": 10,
+            "monto_transferido_en_crypto_de_destino": 1.05
+          },
+          {
+            "id_operacion": 320,
+            "desde": "DAI",
+            "hacia": "Ethereum",
+            "monto_transferido_en_crypto_de_origen": 5.08,
+            "monto_transferido_en_crypto_de_destino": 10
+          },
+          {
+            "id_operacion": 541,
+            "desde": "Ethereum",
+            "hacia": "USDT",
+            "monto_transferido_en_crypto_de_origen": 40,
+            "monto_transferido_en_crypto_de_destino": 19
+          },
+          {
+            "id_operacion": 506,
+            "desde": "Bitcoin",
+            "hacia": "USDT",
+            "monto_transferido_en_crypto_de_origen": 2,
+            "monto_transferido_en_crypto_de_destino": 5.5
+          }
+        ],
+        "wallet": {
+          "usd": 100000,
+          "crypto": [
+            {
+              "crypto_id": 1,
+              "name": "Bitcoin",
+              "quantity": 5
+            },
+            {
+              "crypto_id": 2,
+              "name": "DAI",
+              "quantity": 5
+            },
+            {
+              "crypto_id": 3,
+              "name": "Solana",
+              "quantity": 5
+            },
+            {
+              "crypto_id": 4,
+              "name": "Ethereum",
+              "quantity": 5
+            }
+          ]
+        }
+      },
+      {
+        "info": {
+          "id": 1,
+          "name": "John Doe",
+          "email": "john.due@gmail.com",
+          "password": "contrasena123"
+        },
+        "movements": [
+          {
+            "id_operacion": 260,
+            "desde": "USDT",
+            "hacia": "Bitcoin",
+            "monto_transferido_en_crypto_de_origen": 6,
+            "monto_transferido_en_crypto_de_destino": 3
+          },
+          {
+            "id_operacion": 154,
+            "desde": "USDT",
+            "hacia": "Solana",
+            "monto_transferido_en_crypto_de_origen": 10,
+            "monto_transferido_en_crypto_de_destino": 1.05
+          },
+          {
+            "id_operacion": 320,
+            "desde": "DAI",
+            "hacia": "Ethereum",
+            "monto_transferido_en_crypto_de_origen": 5.08,
+            "monto_transferido_en_crypto_de_destino": 10
+          },
+          {
+            "id_operacion": 541,
+            "desde": "Ethereum",
+            "hacia": "USDT",
+            "monto_transferido_en_crypto_de_origen": 40,
+            "monto_transferido_en_crypto_de_destino": 19
+          },
+          {
+            "id_operacion": 506,
+            "desde": "Bitcoin",
+            "hacia": "USDT",
+            "monto_transferido_en_crypto_de_origen": 2,
+            "monto_transferido_en_crypto_de_destino": 5.5
+          }
+        ],
+        "wallet": {
+          "usd": 110000,
+          "crypto": [
+            {
+              "crypto_id": 1,
+              "name": "Bitcoin",
+              "quantity": 4
+            },
+            {
+              "crypto_id": 2,
+              "name": "DAI",
+              "quantity": 5
+            },
+            {
+              "crypto_id": 3,
+              "name": "Solana",
+              "quantity": 5
+            },
+            {
+              "crypto_id": 4,
+              "name": "Ethereum",
+              "quantity": 5
+            }
+          ]
+        }
       }
-    },
+    ],
     "crypto": [
       {
         "id": "1",
