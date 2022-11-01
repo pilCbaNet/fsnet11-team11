@@ -1,4 +1,4 @@
-<div class="container-cotizaciones">
+<div class="container container-cotizaciones">
     <h1 >Cotizaciones</h1>
     <div class="card">
         
@@ -6,17 +6,18 @@
        
         <div class="grid">
             <div class="row center" *ngFor="let coin of cryptos">
-                <div class="col-4">
-                    {{coin.name}}
-                </div>               
-                    <div class="col-4">
+                <div class="crypto col">
+                    <div class="col-8">
+                        {{coin.name}}
+                    </div>
+                    <div class="col-8">
                         Usd $ {{coin.price.toLocaleString()}}
-                    </div>
-                    
-                    <div class="col-4 buySellButtons">                     
-                     <a routerLink="/home/venta"><button type="button" class="btn btn-primary">Vender</button></a>
-                     <a routerLink="/home/comprar"><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
+                    </div>                    
+                </div>   
+                <div class="container col-7 buySellButtons">
+                    <a routerLink="/home/venta"><button type="button" class="btn btn-primary btn-sm">Vender</button></a>
+                    <a routerLink="/home/comprar"><button type="button" class="btn btn-primary btn-sm">Comprar</button></a>
+                </div>
                     <hr/>
             </div>
         </div>

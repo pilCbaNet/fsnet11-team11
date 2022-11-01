@@ -6,58 +6,9 @@
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.side-card{
-  position: absolute;
-  left:0;
-  height: 85%;
-  width: 15%;
-  background-color: #3C4048;
-  font-size: 1.5em;  
-}
-
-.side-card ul{
-  padding: 0;
-  height: 60%;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  flex-direction: column;
-  
-}
-
-.linkLi{
-  list-style: none;
-  height: 33%;
-  width: 100%;
-  padding-right: 10%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  color:white;
-}
-
-.linkLi:hover{
-  background-color: #7b8392;
-}
-
-.saldo-container{
-  display: flex;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  flex-direction: column;
-  color: white;
-  padding-right: 10%;
-}
-.saldo-container h3{
-  
 }
