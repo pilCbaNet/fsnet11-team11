@@ -6,6 +6,12 @@
                 <span class="login100-form-title p-b-49">
                     Registro
                 </span>
+                <div class="wrap-input100 m-b-23">
+                    <span class="label-input100">Nombre</span>
+                    <input class="input100"
+                    placeholder="Ingrese su nombre completo" >
+                    <span class="focus-input100"></span>
+                </div>
             
                 <div class="wrap-input100 m-b-23">
                     <span class="label-input100">Email</span>
@@ -18,12 +24,22 @@
                 </div>
             
                 <div class="wrap-input100">
-                    <span class="label-input100">Password</span>
+                    <span class="label-input100">Contraseña</span>
                     <input class="input100"
                            type="password"
                            name="password" 
                            placeholder="Ingrese su contraseña"
                            (change)="changePass($event)" formControlName="loginPass">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100">
+                    <span class="label-input100">Contraseña</span>
+                    <input class="input100"
+                           type="password"
+                           name="password" 
+                           placeholder="Repita su contraseña"
+                        >
                     <span class="focus-input100"></span>
                 </div>
                 
