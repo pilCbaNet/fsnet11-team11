@@ -1,4 +1,5 @@
 .container-login100 {
+  position: relative;
   width: 100vw;  
   min-height: 85vh;
   display: -webkit-box;
@@ -6,7 +7,6 @@
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
@@ -14,50 +14,70 @@
   background-size: cover;
 }
 
-.side-card{
+.navegation-bar{
+  width: 100vw;
+  height: 50px;
   position: absolute;
-  left:0;
-  height: 85%;
-  width: 15%;
   background-color: #3C4048;
-  font-size: 1.5em;  
+  top: 0vh;
+  z-index: 90;
+  display: none;
+  justify-content: space-around;
+  color: white;
 }
 
-.side-card ul{
-  padding: 0;
-  height: 60%;
-  width: 100%;
+.navegation-bar ul{
   display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 50%;
   
 }
 
-.linkLi{
-  list-style: none;
-  height: 33%;
-  width: 100%;
-  padding-right: 10%;
+.navegation-bar ul li{
+  height: 100%;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  color:white;
+  justify-content: center;
 }
-
-.linkLi:hover{
-  background-color: #7b8392;
+.navegation-bar ul li:hover{
+  background-color: #7d8596;
+  cursor: pointer;
 }
-
-.saldo-container{
+.saldo-container{ 
   display: flex;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  flex-direction: column;
-  color: white;
-  padding-right: 10%;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.saldo-container p{
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .saldo-container h3{
-  
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.icons-container{
+  cursor: pointer;
+  position: absolute;
+  left: 5%;
+  top: 0;
+  height:47px;
+  width: 47px;
+  border-radius: 100%;
+  background-color: rgba(154, 163, 182, 0.3);
+  box-shadow: 0px 0px 2px 2px rgba(154, 163, 182, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  z-index: 100;
+}
+.menuIcon{
+  filter: invert(100%);
 }

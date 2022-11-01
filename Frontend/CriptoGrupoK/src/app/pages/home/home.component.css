@@ -1,28 +1,32 @@
 .landingContainer{
-    width: 85vw;
-    height:85vh;
+    width: 100vw;
+    height: 85vh;    
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
 }
 
 
 img{ 
+    height: 90%;
+    aspect-ratio: 3840/2160;
     animation-name: opacityChange;
-    animation-duration: 10s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
-    animation-delay: 2s;
-    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-timing-function: linear;
     opacity: 1;
+    border-radius: 100%;
 }
 
 @keyframes opacityChange{
     0%{
-        rotate: 0deg;
+        scale: 1;
     }
     50%{
-        rotate:360deg;
+        scale: 1.2;
     }
 }
 
