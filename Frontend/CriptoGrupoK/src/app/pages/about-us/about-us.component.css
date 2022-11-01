@@ -1,9 +1,7 @@
 .grid-container {
     padding: 20px;
-    width: 85vw;
-    height: 85vh;
-    margin-left: 15vw;
-    overflow-y: scroll;
+    background-color: aqua;
+    
   }
   
   .mat-h1{  
@@ -53,7 +51,7 @@
     height: 4rem;
   }
   
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 1000px){
     .logo{  
       width: 3rem;
       height: 3rem;
@@ -66,7 +64,7 @@
     
   }
   
-  @media screen and (max-width: 300px){
+  @media screen and (max-width: 850px){
     .titulo{
       font-size: x-large;
     }

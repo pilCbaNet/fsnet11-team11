@@ -1,5 +1,5 @@
 .container-login100 {
-  width: 100%;  
+  width: 100vw;  
   min-height: 85vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7,7 +7,7 @@
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
   background-position: center;
@@ -20,7 +20,7 @@
   height: 85%;
   width: 15%;
   background-color: #3C4048;
-  font-size: 1.5em;
+  font-size: 1.5em;  
 }
 
 .side-card ul{
