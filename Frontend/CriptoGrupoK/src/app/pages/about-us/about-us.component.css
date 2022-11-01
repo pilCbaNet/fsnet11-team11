@@ -1,6 +1,7 @@
-.grid-container {
+ .grid-container {
     padding: 20px;
-    width: 90vw;    
+    background-color: aqua;
+    width: 90vw;   
   }
   
   .mat-h1{  
@@ -55,7 +56,7 @@
     height: 4rem;
   }
   
-  @media screen and (max-width: 1000px){
+   @media screen and (max-width: 1000px){
     .logo{  
       width: 3rem;
       height: 3rem;
@@ -83,4 +84,4 @@
       height: 6rem;    
     }
     
-  }
+  } 

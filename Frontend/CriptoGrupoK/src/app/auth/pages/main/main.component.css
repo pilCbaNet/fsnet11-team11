@@ -1,4 +1,5 @@
 .container-login100 {
+  position: relative;
   width: 100vw;  
   min-height: 85vh;
   display: -webkit-box;
@@ -11,4 +12,72 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.navegation-bar{
+  width: 100vw;
+  height: 50px;
+  position: absolute;
+  background-color: #3C4048;
+  top: 0vh;
+  z-index: 90;
+  display: none;
+  justify-content: space-around;
+  color: white;
+}
+
+.navegation-bar ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  
+}
+
+.navegation-bar ul li{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navegation-bar ul li:hover{
+  background-color: #7d8596;
+  cursor: pointer;
+}
+.saldo-container{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.saldo-container p{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.saldo-container h3{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.icons-container{
+  cursor: pointer;
+  position: absolute;
+  left: 5%;
+  top: 0;
+  height:47px;
+  width: 47px;
+  border-radius: 100%;
+  background-color: rgba(154, 163, 182, 0.3);
+  box-shadow: 0px 0px 2px 2px rgba(154, 163, 182, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  z-index: 100;
+}
+.menuIcon{
+  filter: invert(100%);
 }
