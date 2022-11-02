@@ -9,8 +9,35 @@
                 <div class="wrap-input100 m-b-23">
                     <span class="label-input100">Nombre</span>
                     <input class="input100"
-                    placeholder="Ingrese su nombre completo" >
+                    placeholder="Ingrese su nombre completo"
+                    formControlName="loginName" >
                     <span class="focus-input100"></span>
+                </div>
+
+                <div *ngIf="LoginName?.invalid && (LoginName?.dirty || LoginName?.touched)" class="alert alert-danger">
+                    <div *ngIf="LoginName?.errors?.['required']" class="text-danger">
+                        El campo nombre es requerido.
+                    </div>
+                </div>
+
+                <div class="wrap-input100 m-b-23">
+                    <span class="label-input100">Fecha de nacimiento</span>
+                    <input class="input100"
+                           type="date" 
+                           name="date" 
+                           placeholder="Ingrese su fecha de nacimiento"
+                           formControlName="loginDate"
+                           >
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div *ngIf="LoginDate?.invalid && (LoginDate?.dirty || LoginDate?.touched)" class="alert alert-danger">
+                    <div *ngIf="LoginDate?.errors?.['required']" class="text-danger">
+                        El campo Fecha de nacimiento es requerido.
+                    </div>
+                    <div *ngIf="LoginDate?.errors?.['ageValidator']" class="text-danger">
+                        Debe ser mayor de edad.
+                    </div>
                 </div>
             
                 <div class="wrap-input100 m-b-23">
@@ -19,8 +46,16 @@
                            type="email" 
                            name="email" 
                            placeholder="Ingrese su email"
-                           (change)="changeMail($event)" formControlName="loginMail">
+                           formControlName="loginMail">
                     <span class="focus-input100"></span>
+                </div>
+                <div *ngIf="LoginMail?.invalid && (LoginMail?.dirty || LoginMail?.touched)" class="alert alert-danger">
+                    <div *ngIf="LoginMail?.errors?.['required']">
+                        El campo Email es requerido.
+                    </div>
+                    <div *ngIf="LoginMail?.errors?.['email']" class="text-danger">
+                        El campo Email debe contener una direccion válida.
+                    </div>
                 </div>
             
                 <div class="wrap-input100">
@@ -29,8 +64,17 @@
                            type="password"
                            name="password" 
                            placeholder="Ingrese su contraseña"
-                           (change)="changePass($event)" formControlName="loginPass">
+                           formControlName="loginPass">
                     <span class="focus-input100"></span>
+                </div>
+
+                <div *ngIf="LoginPass?.invalid && (LoginPass?.dirty || LoginPass?.touched)" class="alert alert-danger">
+                    <div *ngIf="LoginPass?.errors?.['required']" class="text-danger">
+                        El campo Contraseña es requerido.
+                    </div>
+                    <div *ngIf="LoginPass?.errors?.['minlength']" class="text-danger">
+                        La contraseña debe tener 8 o mas dígitos.
+                    </div>
                 </div>
 
                 <div class="wrap-input100">
@@ -39,16 +83,27 @@
                            type="password"
                            name="password" 
                            placeholder="Repita su contraseña"
+                           formControlName="loginRPass"
                         >
                     <span class="focus-input100"></span>
                 </div>
+                <div *ngIf="LoginRPass?.invalid && (LoginRPass?.dirty || LoginRPass?.touched)" class="alert alert-danger">
+                    <p *ngIf="LoginRPass?.errors?.['required']" class="text-danger">
+                         campo Repetir Contraseña es requerido.
+                    </p>
+                    <p *ngIf="LoginRPass?.errors?.['confirmedValidator']" class="text-danger">
+                        El campo Repetir contraseña debe ser igual al campo Contraseña.
+                   </p>
+                </div>
                 
                 <div class="text-right p-t-8 p-b-31"></div>
+
+                
                 
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn" type="submit">
+                        <button class="login100-form-btn" type="submit" [disabled]="!loginForm.valid">
                             Registrarse
                         </button>
                     </div>

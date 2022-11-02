@@ -11,23 +11,27 @@
                 <div class="wrap-input100 m-b-23">
                     <span class="label-input100">Email</span>
                     <input class="input100"
+                            #inputMail
                            type="email" 
                            name="email" 
                            placeholder="Ingrese su email"
                            (change)="changeMail($event)" formControlName="loginMail">
                     <span class="focus-input100"></span>
+                    
                 </div>
-            
+               
                 <div class="wrap-input100">
                     <span class="label-input100">Contraseña</span>
                     <input class="input100"
+                            #inputPass
                            type="password"
                            name="password" 
                            placeholder="Ingrese su contraseña"
                            (change)="changePass($event)" formControlName="loginPass">
                     <span class="focus-input100"></span>
+                    
                 </div>
-                
+               
                 <div class="text-right p-t-8 p-b-31"></div>
                 
                 <div class="container-login100-form-btn">

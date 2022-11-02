@@ -8,9 +8,33 @@
     overflow-y: scroll;
 }
 
-tbody{
-    color:white !important;
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
 }
-td{
-    color: white !important;
+.row{
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+.topRow{
+    border-top: 2px solid black;
+}
+
+.crypto-grid{
+    width: 100%;
+}
+
+.cryptoTable{
+    width: 60%;
+    
+}
+
+.movementTable{
+    width: 60%;
+   
 }

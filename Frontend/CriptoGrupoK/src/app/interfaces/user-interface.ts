@@ -14,9 +14,9 @@ interface Movement{
     desde:String;
     hacia:String;
     idOperacion:Number;
-    montoCryptoDestino:Number;
-    montoCryptoOrigen:number;
-    montoUsd:Number;
+    montoDestino:Number;
+    montoOrigen:number;
+    fecha:String;
 }
 
 interface Wallet{

@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { UserInterface } from 'src/app/interfaces/user-interface';
 import { CompraServiceService } from 'src/app/services/compra-service.service';
-import {FormBuilder,Validators} from '@angular/forms';  
+import {FormBuilder,FormControl,FormGroup,Validators} from '@angular/forms';  
 import { Router } from '@angular/router';
+import { timeout } from 'rxjs';
+
 
 @Component({
   selector: 'app-login',
@@ -15,8 +17,13 @@ export class LoginComponent implements OnInit {
  
   loginMail!:any;
   loginPass!:any;
+  form:any;
+  
 
   constructor(private getDataService : CompraServiceService,public fb: FormBuilder,private router: Router) { }
+
+  @ViewChild('inputMail') mail! : ElementRef;
+  @ViewChild('inputPass') pass! : ElementRef;
 
   ngOnInit(): void {
     this.getDataService.obtenerDataClient().subscribe(data=>{
@@ -50,17 +57,24 @@ export class LoginComponent implements OnInit {
     try{
       let existentUser = this.users.find(c=>c.info.email === this.loginForm.value.loginMail)
       
-      if(existentUser!==undefined){
+      if(existentUser!=undefined){
         if(existentUser.info.password === this.loginForm.value.loginPass){
           this.router.navigate(["home/landing"])
+          sessionStorage.setItem('email',existentUser.info.email.toString())
           return
-        }
-      }  
-      alert("Los datos proporcionados no se correponden con ningún usuario registrado.")
+        }else{
+          alert("La contraseña ingresada es incorrecta.")
+        }        
+      }else{
+        alert("La dirección de correo ingresada no esta registrada.")
+      }     
+      
+      
+      
     }
     catch(e){
       
-      alert("Los datos proporcionados no se correponden con ningún usuario registrado.")
+      alert("Los datos proporcionados no se corresponden con ningún usuario registrado.")
     }    
     
   }
