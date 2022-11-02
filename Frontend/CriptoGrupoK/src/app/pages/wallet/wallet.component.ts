@@ -17,6 +17,16 @@ export class WalletComponentComponent implements OnInit {
   user!:UserInterface;
   saldo!:Number;
   transactionForm:FormGroup;
+  movement = {
+    "id_operacion": 260,
+    "desde": "",
+    "hacia": "",
+    "monto_de_origen": 6,
+    "monto_de_destino": 3,
+    "fecha": ""
+  }
+
+
   constructor(private miServicioWallet: CompraServiceService,public fb: FormBuilder) {
 
     this.transactionForm = this.fb.group({
@@ -64,13 +74,30 @@ get Transaction(){
       if(this.Usd?.invalid)this.Usd.markAsTouched();
       if(this.Transaction?.invalid)this.Transaction.markAsTouched();
     }
+    
 
     if(this.transactionForm.valid){
       if(transaction === "Retiro"){
+        if(this.transactionForm.value.usd > this.user.wallet.usd){
+          alert("El saldo es insuficiente.")
+          return
+        }
         this.data.users.find((c:any)=>c.info.email === this.user.info.email).wallet.usd -= usd;
+        this.movement.desde="Mi cuenta"
+        this.movement.hacia="Retiro"
+        this.movement.monto_de_destino=usd
+        this.movement.monto_de_origen=usd
+        this.movement.fecha = new Date().getDay()+"/"+new Date().getMonth()+"/"+new Date().getFullYear()
+        this.data.users.find((c:any)=>c.info.email === this.user.info.email).movements.push(this.movement)
       }
       if(transaction === "Deposito" ){
         this.data.users.find((c:any)=>c.info.email === this.user.info.email).wallet.usd += usd;
+        this.movement.desde="Deposito"
+        this.movement.hacia="Mi cuenta"
+        this.movement.monto_de_destino=usd
+        this.movement.monto_de_origen=usd
+        this.movement.fecha = new Date().getDay()+"/"+new Date().getMonth()+"/"+new Date().getFullYear()
+        this.data.users.find((c:any)=>c.info.email === this.user.info.email).movements.push(this.movement)
       }
        
       this.miServicioWallet.actualizarDataCliente(this.data).subscribe(data=>{
