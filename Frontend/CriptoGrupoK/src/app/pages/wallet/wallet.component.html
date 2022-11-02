@@ -7,7 +7,7 @@
     
   </div>
     <hr>
-    <div class="usdtable">
+    <div class="usdTable">
 
       <form [formGroup]="transactionForm" (ngSubmit)="onFormSubmit()">
 
@@ -33,31 +33,31 @@
         <button type="submit" class="btn btn-primary">Aceptar</button>
       </form>
 
-      <div class="row bg-white saldo-grid topRow">
+      <div class="row saldo-grid">
         <div class="col-sm-6 col-md-6">
           Saldo
         </div>
         <div class="col-sm-6 col-md-6">
-          {{saldo}}
+          USD {{saldo}}
         </div>      
       </div>
 
     </div>
     <hr>
     <div class="cryptoTable">
-      <div class="row bg-white crypto-grid topRow" >
-        <div class="col-sm-6 col-md-4">
+      <div class="row crypto-grid " >
+        <div class="col-sm-6 col-md-6">
           crypto
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-6">
           Cantidad
         </div>        
       </div>
-      <div class="row bg-white crypto-grid" *ngFor="let crypto of userCryptos" >
-        <div class="col-sm-6 col-md-4">
+      <div class="row crypto-grid" *ngFor="let crypto of userCryptos" >
+        <div class="col-sm-6 col-md-6">
           {{crypto.name}}
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-6">
           {{crypto.quantity}}
         </div>        
       </div>
@@ -66,23 +66,21 @@
     <hr>
 
     <div class="movementTable">
-      <div class="row bg-white topRow">
+      
+      <div class="row movement-grid">
         <div class="col-sm-3">Fecha</div>
         <div class="col-sm-3">Moneda Inicial</div>
         <div class="col-sm-3">Moneda Final</div>
         <div class="col-sm-3">Monto</div>
       </div>
-      <div class="row bg-white" *ngFor="let movement of userMovements">
+      <div class="row movement-grid" *ngFor="let movement of userMovements">
         <div class="col-sm-3">{{movement.fecha}}</div>
         <div class="col-sm-3">{{movement.desde}}</div>
         <div class="col-sm-3">{{movement.hacia}}</div>
         <div class="col-sm-3">{{movement.monto_de_origen}}</div>
       </div>
+    
     </div>
-
-
-
-
 
   </div>  
 </div>
