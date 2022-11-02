@@ -1,6 +1,7 @@
  .grid-container {
     padding: 20px;    
-    width: 90vw;   
+    width: 90vw;  
+    margin-top: 4em; 
   }
   
   .mat-h1{  
@@ -54,6 +55,16 @@
     width: 4rem;
     height: 4rem;
   }
+
+  .logo:hover{
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .logo:active{
+    width: 4rem;
+    height: 4rem;
+  }
   
    @media screen and (max-width: 1000px){
     .logo{  
@@ -71,6 +82,11 @@
   @media screen and (max-width: 850px){
     .titulo{
       font-size: x-large;
+    }
+
+    .mat-h1{
+      font-size: 2em;
+      font-weight:550;
     }
   
     .logo{  

@@ -13,13 +13,13 @@
         <div class="container gridContainer">
             <div class="row">
                 <div class="col-4 text-center bg-white cell">Crypto</div>
-                <div class="col-4 text-center bg-white cell">Precio</div>
-                <div class="col-2 text-center bg-white cell">Cantidad</div>
+                <div class="col-3 text-center bg-white cell">Precio</div>
+                <div class="col-3 text-center bg-white cell">Cantidad</div>
                 <div class="col-2 text-center bg-white cell"></div>
                 <div id="cryptoCell" class="col-4 text-center bg-white cell">{{selectedCoin.name}}</div>
-                <div id="priceCell" class="col-4 text-center bg-white cell">{{selectedCoin.price}}</div>
-                <div id="amountCell" class="col-2 text-center bg-white cell">{{selectedCoin.amount}}</div>
-                <div class="col-2 text-center bg-white cell"><button type="button" id="buyButton" class="btn btn-primary gridButton" [disabled]="buyButtonDisabled" (click)="openFormModal()">Comprar</button></div>                            
+                <div id="priceCell" class="col-3 text-center bg-white cell">{{selectedCoin.price}}</div>
+                <div id="amountCell" class="col-3 text-center bg-white cell">{{selectedCoin.amount}}</div>
+                <div id="buyButtonCell" class="col-2 text-center bg-white cell"><button type="button" id="buyButton" class="btn btn-primary gridButton" [disabled]="buyButtonDisabled" (click)="openFormModal()">Comprar</button></div>                            
             </div>
         </div>        
     </div>   

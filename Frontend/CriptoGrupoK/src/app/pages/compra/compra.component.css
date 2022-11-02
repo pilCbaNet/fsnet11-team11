@@ -1,6 +1,6 @@
 .CompraContainer{
-    width: 85vw;
-    height:85vh;
+    width: 90vw;
+    height:100vh;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +43,7 @@
     width: 90%;
 }
 .cell{
-    border: 1px solid black;
+    border: 1px solid black;    
     padding: 0;
     display: flex;
     align-items: center;
@@ -70,5 +70,30 @@
     font-size: 1.2rem;
     font-weight: 400;
     
+}
+
+@media screen and (max-width: 800px){
+    .gridFormContainer form select{
+        height: 2rem;
+        border-radius: 5px;
+        width: 80%;
+    }
+
+    .gridFormContainer form button{
+        width: 40%;
+    }
+
+    .gridFormContainer form{
+        margin-top: 0;
+    }
+
+    .gridFormContainer{        
+        width: 98%;
+        height: 50%;        
+    }    
+
+    #buyButtonCell{
+        font-size: small
+    }
 }
 
