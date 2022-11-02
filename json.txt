@@ -1,0 +1,95 @@
+{
+  "data": {
+    "user": {
+      "info": {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john.due@gmail.com",
+        "password": "contrasena123"
+      },
+      "movements": [
+        {
+          "id operacion": 20,
+          "desde": "USDT",
+          "hacia": "Bitcoin",
+          "monto transferido en usd": 8,
+          "monto transferido en crypto de origen": 6,
+          "monto transferido en crypto de destino": 3
+        },
+        {
+          "id operacion": 20,
+          "desde": "USDT",
+          "hacia": "Solana",
+          "monto transferido en usd": 4,
+          "monto transferido en crypto de origen": 10,
+          "monto transferido en crypto de destino": 1.05
+        },
+        {
+          "id operacion": 30,
+          "desde": "DAI",
+          "hacia": "Ethereum",
+          "monto transferido en usd": 9,
+          "monto transferido en crypto de origen": 5.08,
+          "monto transferido en crypto de destino": 10
+        },
+        {
+          "id operacion": 40,
+          "desde": "Ethereum",
+          "hacia": "USDT",
+          "monto transferido en usd": 3.2,
+          "monto transferido en crypto de origen": 40,
+          "monto transferido en crypto de destino": 19
+        },
+        {
+          "id operacion": 50,
+          "desde": "Bitcoin",
+          "hacia": "USDT",
+          "monto transferido en usd": 12.05,
+          "monto transferido en crypto de origen": 2,
+          "monto transferido en crypto de destino": 5.5
+        }
+      ],
+      "wallet": [
+        {
+          "crypto_id": 1,
+          "quantity": 0.1
+        },
+        {
+          "crypto_id": 2,
+          "quantity": 4.3
+        },
+        {
+          "crypto_id": 3,
+          "quantity": 0.5
+        },
+        {
+          "crypto_id": 4,
+          "quantity": 1.7
+        }
+      ]
+    },
+
+    "crypto": [
+      {
+        "id": "1",
+        "name": "Bitcoin",
+        "price": 20000
+      },
+      {
+        "id": "2",
+        "name": "DAI",
+        "price": 1
+      },
+      {
+        "id": "3",
+        "name": "Solana",
+        "price": 28
+      },
+      {
+        "id": "4",
+        "name": "Ethereum",
+        "price": 1308
+      }
+    ]
+  }
+}
