@@ -1,24 +1,49 @@
 <div class="main-container pb-5">
 <div class="container px-4 text-center">
-  <div class="container">
+  <div class="container-wallet">
+    <h2>Mi Billetera</h2>
 
-    <div class="row bg-white saldo-grid topRow">
-      <div class="col-sm-6 col-md-3">
-        Saldo
-      </div>
-      <div class="col-sm-6 col-md-3">
-        1000000
-      </div>
-      <div class="col-sm-6 col-md-3">
-        Depositar
-      </div>
-      <div class="col-sm-6 col-md-3">
-        Retirar
-      </div>
-    </div>
-
+    <div class="saldoTable">
+    
+  </div>
     <hr>
+    <div class="usdtable">
 
+      <form [formGroup]="transactionForm" (ngSubmit)="onFormSubmit()">
+
+        <div class="usdInput">
+          <input type="number" formControlName="usd"  placeholder="Ingrese un Monto">
+          <div *ngIf="Usd?.invalid && (Usd?.dirty || Usd?.touched)" class="alert alert-danger">
+            <div *ngIf="Usd?.errors?.['required']" class="text-danger">
+              Debe ingresar un valor.
+            </div>
+          </div>
+        </div>        
+
+        <div class="transactionInputs">
+          <input type="radio" value="Deposito" formControlName="transaction"> Depósito
+          <input type="radio" value="Retiro" formControlName="transaction"> Retiro
+          <div *ngIf="Transaction?.invalid && (Transaction?.dirty || Transaction?.touched)" class="alert alert-danger">
+            <div *ngIf="Transaction?.errors?.['required']" class="text-danger">
+              Debe elegir una opción.
+            </div>
+          </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+      </form>
+
+      <div class="row bg-white saldo-grid topRow">
+        <div class="col-sm-6 col-md-6">
+          Saldo
+        </div>
+        <div class="col-sm-6 col-md-6">
+          {{saldo}}
+        </div>      
+      </div>
+
+    </div>
+    <hr>
     <div class="cryptoTable">
       <div class="row bg-white crypto-grid topRow" >
         <div class="col-sm-6 col-md-4">

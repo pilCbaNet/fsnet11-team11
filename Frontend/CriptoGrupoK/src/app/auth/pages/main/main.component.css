@@ -31,7 +31,7 @@
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  width: 50%;
+  width: 80%;
   
 }
 
@@ -39,7 +39,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .navegation-bar ul li:hover{
   background-color: #7d8596;
@@ -64,7 +64,7 @@
 .icons-container{
   cursor: pointer;
   position: absolute;
-  left: 5%;
+  left: 1%;
   top: 0;
   height:47px;
   width: 47px;
