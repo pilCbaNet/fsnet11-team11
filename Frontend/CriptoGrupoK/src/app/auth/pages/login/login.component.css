@@ -11,17 +11,17 @@
       margin: 0px; 
       padding: 0px; 
       box-sizing: border-box;
-      font-family: Poppins-Bold;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
   body, html {
       height: 85%;
-      font-family: Poppins-Regular, sans-serif;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
   /*---------------------------------------------*/
   a {
-      font-family: Poppins-Regular;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       font-size: 14px;
       line-height: 1.7;
       color: #666666;
@@ -47,7 +47,7 @@
   }
   
   p {
-      /* font-family: Poppins-Regular; */
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       font-size: 14px;
       line-height: 1.7;
       color: #666666;
@@ -89,14 +89,14 @@
   /*//////////////////////////////////////////////////////////////////
   [ Utility ]*/
   .txt1 {
-    font-family: Poppins-Regular;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: #666666;
   }
   
   .txt2 {
-    font-family: Poppins-Regular;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: #333333;
@@ -150,7 +150,7 @@
   
   .login100-form-title {
     display: block;
-    font-family: Poppins-Bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 39px;
     color: #333333;
     line-height: 1.2;
@@ -169,7 +169,7 @@
   }
   
   .label-input100 {
-    font-family: Poppins-Regular;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
     color: #333333;
     line-height: 1.5;
@@ -177,7 +177,7 @@
   }
   
   .input100 {
-    font-family: Poppins-Medium;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
     color: #333333;
     line-height: 1.2;
@@ -203,8 +203,7 @@
   
   .focus-input100::after {
     content: attr(data-symbol);
-    font-family: Material-Design-Iconic-Font;
-    color: #adadad;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    color: #adadad;
     font-size: 22px;
   
     display: -webkit-box;
@@ -300,7 +299,7 @@
   }
   
   .login100-form-btn {
-    font-family: Poppins-Medium;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
     color: #fff;
     line-height: 1.2;

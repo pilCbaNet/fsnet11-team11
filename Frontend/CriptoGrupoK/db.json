@@ -300,6 +300,81 @@
             }
           ]
         }
+      },
+      {
+        "info": {
+          "id": 1,
+          "name": "John Doe",
+          "email": "f@gmail.com",
+          "password": "12345678"
+        },
+        "movements": [
+          {
+            "id_operacion": 260,
+            "desde": "USDT",
+            "hacia": "Bitcoin",
+            "monto_de_origen": 6,
+            "monto_de_destino": 3,
+            "fecha": "10/10/2022"
+          },
+          {
+            "id_operacion": 154,
+            "desde": "USDT",
+            "hacia": "Solana",
+            "monto_de_origen": 6,
+            "monto_de_destino": 3,
+            "fecha": "10/10/2022"
+          },
+          {
+            "id_operacion": 320,
+            "desde": "DAI",
+            "hacia": "Ethereum",
+            "monto_de_origen": 6,
+            "monto_de_destino": 3,
+            "fecha": "10/10/2022"
+          },
+          {
+            "id_operacion": 541,
+            "desde": "Ethereum",
+            "hacia": "USDT",
+            "monto_de_origen": 6,
+            "monto_de_destino": 3,
+            "fecha": "10/10/2022"
+          },
+          {
+            "id_operacion": 506,
+            "desde": "Bitcoin",
+            "hacia": "USDT",
+            "monto_de_origen": 6,
+            "monto_de_destino": 3,
+            "fecha": "10/10/2022"
+          }
+        ],
+        "wallet": {
+          "usd": 106000,
+          "crypto": [
+            {
+              "crypto_id": 1,
+              "name": "Bitcoin",
+              "quantity": 4.5
+            },
+            {
+              "crypto_id": 2,
+              "name": "DAI",
+              "quantity": 4
+            },
+            {
+              "crypto_id": 3,
+              "name": "Solana",
+              "quantity": 5
+            },
+            {
+              "crypto_id": 4,
+              "name": "Ethereum",
+              "quantity": 5
+            }
+          ]
+        }
       }
     ],
     "crypto": [
