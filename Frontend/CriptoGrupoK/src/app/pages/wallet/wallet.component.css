@@ -48,7 +48,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    height: 30vh;
+    
 }
 
 .saldo-grid{
@@ -75,7 +75,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    height: 30vh;
+    
 }
 .movement-grid{
     width: 100%;

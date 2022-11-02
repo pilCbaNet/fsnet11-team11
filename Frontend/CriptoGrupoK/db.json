@@ -51,12 +51,12 @@
           }
         ],
         "wallet": {
-          "usd": 106000,
+          "usd": 96000,
           "crypto": [
             {
               "crypto_id": 1,
               "name": "Bitcoin",
-              "quantity": 4.5
+              "quantity": 5.5
             },
             {
               "crypto_id": 2,
@@ -123,10 +123,42 @@
             "monto_de_origen": 6,
             "monto_de_destino": 3,
             "fecha": "10/10/2022"
+          },
+          {
+            "id_operacion": 260,
+            "desde": "Mi cuenta",
+            "hacia": "Retiro",
+            "monto_de_origen": 10000,
+            "monto_de_destino": 10000,
+            "fecha": "1667419377116"
+          },
+          {
+            "id_operacion": 260,
+            "desde": "Mi cuenta",
+            "hacia": "Retiro",
+            "monto_de_origen": 10000,
+            "monto_de_destino": 10000,
+            "fecha": "Invalid Date"
+          },
+          {
+            "id_operacion": 260,
+            "desde": "Mi cuenta",
+            "hacia": "Retiro",
+            "monto_de_origen": 5000,
+            "monto_de_destino": 5000,
+            "fecha": "Wed Nov 02 2022 17:04:45 GMT-0300 (hora estándar de Brasilia)"
+          },
+          {
+            "id_operacion": 260,
+            "desde": "Mi cuenta",
+            "hacia": "Retiro",
+            "monto_de_origen": 5,
+            "monto_de_destino": 5,
+            "fecha": "3/10/2022"
           }
         ],
         "wallet": {
-          "usd": 120000,
+          "usd": 94995,
           "crypto": [
             {
               "crypto_id": 1,
@@ -305,7 +337,7 @@
         "info": {
           "id": 1,
           "name": "John Doe",
-          "email": "f@gmail.com",
+          "email": "lucas@gmail.com",
           "password": "12345678"
         },
         "movements": [
@@ -348,15 +380,31 @@
             "monto_de_origen": 6,
             "monto_de_destino": 3,
             "fecha": "10/10/2022"
+          },
+          {
+            "id_operacion": 260,
+            "desde": "Deposito",
+            "hacia": "Mi cuenta",
+            "monto_de_origen": 4000,
+            "monto_de_destino": 4000,
+            "fecha": "3/10/2022"
+          },
+          {
+            "id_operacion": 260,
+            "desde": "Mi cuenta",
+            "hacia": "Retiro",
+            "monto_de_origen": 10000,
+            "monto_de_destino": 10000,
+            "fecha": "3/10/2022"
           }
         ],
         "wallet": {
-          "usd": 106000,
+          "usd": 90000,
           "crypto": [
             {
               "crypto_id": 1,
               "name": "Bitcoin",
-              "quantity": 4.5
+              "quantity": 5.5
             },
             {
               "crypto_id": 2,
