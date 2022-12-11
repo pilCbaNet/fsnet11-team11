@@ -2225,19 +2225,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sunph\\.nuget\\packages\\": {}
+    "C:\\Users\\franm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\backend\\backend.csproj",
+      "projectUniqueName": "E:\\PIL\\fsnet11-team11\\Backend\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\backend\\backend.csproj",
-      "packagesPath": "C:\\Users\\Sunph\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\backend\\obj\\",
+      "projectPath": "E:\\PIL\\fsnet11-team11\\Backend\\backend\\backend.csproj",
+      "packagesPath": "C:\\Users\\franm\\.nuget\\packages\\",
+      "outputPath": "E:\\PIL\\fsnet11-team11\\Backend\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sunph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\franm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2297,7 +2297,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
