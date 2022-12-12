@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace cryptoAppAPI.Models
+namespace Entities
 {
     public partial class Usuario
     {

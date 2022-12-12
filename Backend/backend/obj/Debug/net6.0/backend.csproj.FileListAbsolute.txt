@@ -60,3 +60,13 @@ C:\Users\Sunph\Documents\Bizit\PIL\Backend\backend\obj\Debug\net6.0\refint\backe
 C:\Users\Sunph\Documents\Bizit\PIL\Backend\backend\obj\Debug\net6.0\backend.pdb
 C:\Users\Sunph\Documents\Bizit\PIL\Backend\backend\obj\Debug\net6.0\backend.genruntimeconfig.cache
 C:\Users\Sunph\Documents\Bizit\PIL\Backend\backend\obj\Debug\net6.0\ref\backend.dll
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.AssemblyInfo.cs
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.dll
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\backend\obj\Debug\net6.0\refint\backend.dll
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.pdb

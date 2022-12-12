@@ -1,0 +1,12 @@
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\Negocio\bin\Debug\net6.0\Negocio.deps.json
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\Negocio\bin\Debug\net6.0\Negocio.dll
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\Negocio\bin\Debug\net6.0\Negocio.pdb
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\Negocio\obj\Debug\net6.0\Negocio.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\Negocio\obj\Debug\net6.0\Negocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\Negocio\obj\Debug\net6.0\Negocio.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\Negocio\obj\Debug\net6.0\Negocio.AssemblyInfo.cs
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\Negocio\obj\Debug\net6.0\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\Negocio\obj\Debug\net6.0\Negocio.dll
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\Negocio\obj\Debug\net6.0\refint\Negocio.dll
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\Negocio\obj\Debug\net6.0\Negocio.pdb
+C:\Users\Usuario\Documents\Francisco\Web development\PIL .Net\ISPC_Full Stack .Net\CryptoApp\2do Sprint\fsnet11-team11\Backend\Negocio\obj\Debug\net6.0\ref\Negocio.dll
