@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using cryptoAppAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using Entities;
+using System.Net.Mail;
+using Microsoft.AspNetCore.Identity;
+using _0_DTO;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -10,53 +13,49 @@ namespace cryptoAppAPI.Controllers
     [ApiController]
     public class usuariosController : ControllerBase
     {
-        // GET: api/<usuariosController>
-        [HttpGet]
-        public List<Usuario> Get()
+
+     
+        [HttpPost]
+        public Usuario? Post([FromBody] GetUsuarioDto user)
         {
             using (var db = new cryptoDbContext()) 
             {
-               return db.Usuarios.ToList();
-            }
-        }
 
-        // GET api/<usuariosController>/5
-        [HttpGet("mail")]
-        public Usuario Get(string mail, string contraseña)
-        {
-            using (var db = new cryptoDbContext()) 
-            {
-                Usuario user = new Usuario();
-
-                var resp = db.Usuarios.FirstOrDefault(u => u.Mail == mail && u.Contraseña == contraseña);
-
-                if (resp != null) user = resp;
-
-                return user;
+                return db.Usuarios.Where(a => a.Mail == user.Mail && a.Contraseña == user.Contraseña)
+                    .Include(a => a.Billeteras).FirstOrDefault();
+                       
             }
         }
 
         // POST api/<usuariosController>
-        [HttpPost]
-        public void Post([FromBody] Usuario oUsuario)
+        [HttpPost("register")]
+        public void Post([FromBody] PostUsuarioDto user)
         {
             using (var db = new cryptoDbContext())
             {
-                db.Usuarios.Add(oUsuario);
-                db.SaveChanges();
+                try
+                {
+                    Usuario oUsuario = new Usuario();
+                    Billetera oBilletera = new Billetera();
+
+                    oUsuario.Apenom = user.Apenom;
+                    oUsuario.Mail = user.Mail;
+                    oUsuario.Contraseña = user.Contraseña;
+                    oUsuario.Nacimiento = user.Fecha;
+                    oUsuario.Dni = user.Document;
+                    oBilletera.Saldo = 0;
+                    oUsuario.Billeteras.Add(oBilletera);
+
+                    db.Usuarios.Add(oUsuario);
+                    db.SaveChanges();
+                }
+                catch (Exception ex) 
+                {
+                    throw;
+                }
+                
             }
         }
-
-        // PUT api/<usuariosController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<usuariosController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+      
     }
 }
