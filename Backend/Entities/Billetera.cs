@@ -17,4 +17,6 @@ namespace Entities
         public virtual Usuario IdClienteNavigation { get; set; } = null!;
         public virtual ICollection<Movimiento> Movimientos { get; set; }
     }
+
+  
 }

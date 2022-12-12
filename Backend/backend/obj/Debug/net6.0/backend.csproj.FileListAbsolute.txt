@@ -519,7 +519,6 @@ C:\FRAN\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.GeneratedMSBuild
 C:\FRAN\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.AssemblyInfoInputs.cache
 C:\FRAN\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.AssemblyInfo.cs
 C:\FRAN\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.csproj.CoreCompileInputs.cache
-C:\FRAN\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.MvcApplicationPartsAssemblyInfo.cs
 C:\FRAN\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.MvcApplicationPartsAssemblyInfo.cache
 C:\FRAN\fsnet11-team11\Backend\backend\obj\Debug\net6.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props
 C:\FRAN\fsnet11-team11\Backend\backend\obj\Debug\net6.0\staticwebassets\msbuild.build.backend.props
@@ -537,3 +536,4 @@ C:\FRAN\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.genruntimeconfig
 C:\FRAN\fsnet11-team11\Backend\backend\obj\Debug\net6.0\ref\backend.dll
 C:\FRAN\fsnet11-team11\Backend\backend\bin\Debug\net6.0\0-DTO.dll
 C:\FRAN\fsnet11-team11\Backend\backend\bin\Debug\net6.0\0-DTO.pdb
+C:\FRAN\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.MvcApplicationPartsAssemblyInfo.cs
