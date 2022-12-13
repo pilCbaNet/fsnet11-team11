@@ -869,6 +869,19 @@
             "rid": "win"
           }
         }
+      },
+      "Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.11"
+        },
+        "compile": {
+          "bin/placeholder/Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entities.dll": {}
+        }
       }
     }
   },
@@ -2215,29 +2228,35 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Entities/1.0.0": {
+      "type": "project",
+      "path": "Entities/Entities.csproj",
+      "msbuildProject": "Entities/Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Entities >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.11",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sunph\\.nuget\\packages\\": {}
+    "C:\\Users\\Matia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\Matia\\Desktop\\PIL\\CriptoApp\\Backend\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\backend\\backend.csproj",
-      "packagesPath": "C:\\Users\\Sunph\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\backend\\obj\\",
+      "projectPath": "C:\\Users\\Matia\\Desktop\\PIL\\CriptoApp\\Backend\\backend\\backend.csproj",
+      "packagesPath": "C:\\Users\\Matia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Matia\\Desktop\\PIL\\CriptoApp\\Backend\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sunph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Matia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2250,7 +2269,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Matia\\Desktop\\PIL\\CriptoApp\\Backend\\backend\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\Matia\\Desktop\\PIL\\CriptoApp\\Backend\\backend\\Entities\\Entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -2297,7 +2320,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

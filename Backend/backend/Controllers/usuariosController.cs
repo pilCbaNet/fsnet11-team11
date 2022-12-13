@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using cryptoAppAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using Entities;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,9 +14,9 @@ namespace cryptoAppAPI.Controllers
         [HttpGet]
         public List<Usuario> Get()
         {
-            using (var db = new cryptoDbContext()) 
+            using (var db = new cryptoDbContext())
             {
-               return db.Usuarios.ToList();
+                return db.Usuarios.ToList();
             }
         }
 
@@ -24,7 +24,7 @@ namespace cryptoAppAPI.Controllers
         [HttpGet("mail")]
         public Usuario Get(string mail, string contraseña)
         {
-            using (var db = new cryptoDbContext()) 
+            using (var db = new cryptoDbContext())
             {
                 Usuario user = new Usuario();
 

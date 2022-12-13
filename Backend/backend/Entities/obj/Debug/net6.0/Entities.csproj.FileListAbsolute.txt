@@ -1,0 +1,14 @@
+C:\Users\Matia\Desktop\PIL\CriptoApp\Backend\backend\Entities\obj\Debug\net6.0\Entities.csproj.AssemblyReference.cache
+C:\Users\Matia\Desktop\PIL\CriptoApp\Backend\backend\Entities\obj\Debug\net6.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matia\Desktop\PIL\CriptoApp\Backend\backend\Entities\obj\Debug\net6.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Matia\Desktop\PIL\CriptoApp\Backend\backend\Entities\obj\Debug\net6.0\Entities.AssemblyInfo.cs
+C:\Users\Matia\Desktop\PIL\CriptoApp\Backend\backend\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Matia\Desktop\PIL\CriptoApp\Backend\backend\Entities\bin\Debug\net6.0\Entities.deps.json
+C:\Users\Matia\Desktop\PIL\CriptoApp\Backend\backend\Entities\bin\Debug\net6.0\Entities.runtimeconfig.json
+C:\Users\Matia\Desktop\PIL\CriptoApp\Backend\backend\Entities\bin\Debug\net6.0\Entities.dll
+C:\Users\Matia\Desktop\PIL\CriptoApp\Backend\backend\Entities\bin\Debug\net6.0\Entities.pdb
+C:\Users\Matia\Desktop\PIL\CriptoApp\Backend\backend\Entities\obj\Debug\net6.0\Entities.dll
+C:\Users\Matia\Desktop\PIL\CriptoApp\Backend\backend\Entities\obj\Debug\net6.0\refint\Entities.dll
+C:\Users\Matia\Desktop\PIL\CriptoApp\Backend\backend\Entities\obj\Debug\net6.0\Entities.pdb
+C:\Users\Matia\Desktop\PIL\CriptoApp\Backend\backend\Entities\obj\Debug\net6.0\Entities.genruntimeconfig.cache
+C:\Users\Matia\Desktop\PIL\CriptoApp\Backend\backend\Entities\obj\Debug\net6.0\ref\Entities.dll
