@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CryptosInterface } from 'src/app/interfaces/cryptos-interface';
-import { UserInterface } from 'src/app/interfaces/user-interface';
+import { Movimientos, UserInterface } from 'src/app/interfaces/user-interface';
 import { CompraServiceService } from 'src/app/services/compra-service.service';
 import { LoginService } from 'src/app/services/login.service';
+import { MovementService } from 'src/app/services/movement.service';
 
 
 @Component({
@@ -13,6 +14,7 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class WalletComponentComponent implements OnInit {
   idBilletera!:string;
+  movimientos!:Array<Movimientos>;
   data:any;
   userCryptos: any;
   userMovements:any;
@@ -29,7 +31,7 @@ export class WalletComponentComponent implements OnInit {
   }
 
 
-  constructor(private miServicioCompraService: CompraServiceService,public fb: FormBuilder,private userService: LoginService) {
+  constructor(private miServicioCompraService: CompraServiceService,public fb: FormBuilder,private userService: LoginService,private movementsService: MovementService) {
 
     this.transactionForm = this.fb.group({
       usd:["",[Validators.required]],
@@ -39,19 +41,24 @@ export class WalletComponentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.saldo = this.userService.usuarioAutenticado.billeteras[0].saldo;
     this.idBilletera = this.userService.usuarioAutenticado.billeteras[0].idBilleteras.toString();
+    this.miServicioCompraService.obtenerDataClient(this.idBilletera).subscribe(data=>{      
+      this.saldo = data
+    })
+    
+    this.movementsService.traerMovimientos(this.idBilletera).subscribe(a=>this.movimientos = a)
+    
+    
   }
+
+  
   
     
   
     dataActualization(data:any){
-      let sessionMail = sessionStorage.getItem("email")
-      this.data = data; 
-      this.user = data.users.find((user:any) => user.info.email == sessionMail)
-      this.userCryptos = this.user.wallet.crypto
-      this.userMovements = this.user.movements
-      this.saldo = this.user.wallet.usd
+      let sessionMail = this.userService.usuarioAutenticado.mail;
+      this.userMovements = this.movimientos
+      this.saldo = this.saldo
     }
 
 
@@ -84,11 +91,16 @@ get Transaction(){
         this.miServicioCompraService.retiroClient(this.idBilletera,{
           monto: usd,
           operacion: "retiro",
-          idBilletera: this.idBilletera
+          idBilletera: this.idBilletera,
+          fecha: new Date()
         }).subscribe(data=>{
           this.miServicioCompraService.obtenerDataClient(this.idBilletera).subscribe(data=>{      
             this.saldo = data
-            console.log(this.saldo)
+            this.movementsService.traerMovimientos(this.idBilletera).subscribe(a=> {
+              this.movimientos = a
+              console.log(this.movimientos)
+            })
+            
           })
         })
       }
@@ -97,20 +109,23 @@ get Transaction(){
         this.miServicioCompraService.depositoClient(this.idBilletera,{
           monto: usd,
           operacion: "ingreso",
-          idBilletera: this.idBilletera
+          idBilletera: this.idBilletera,
+          fecha: new Date()
         }).subscribe(data=>{
           this.miServicioCompraService.obtenerDataClient(this.idBilletera).subscribe(data=>{      
             this.saldo = data
-            console.log(this.saldo)
+            this.movementsService.traerMovimientos(this.idBilletera).subscribe(a=> {
+              this.movimientos = a
+              console.log(this.movimientos)
+            })
+            
           })
         })
       }
-       
-      // this.miServicioWallet.actualizarDataCliente(this.data).subscribe(data=>{
-      //   alert("La transaccón fue realizada con exito")
-      //   this.dataActualization(data)
-      // })
+      console.log(this.movimientos)
+      
     }
+    
   }
  
   

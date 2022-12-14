@@ -43,41 +43,21 @@
       </div>
 
     </div>
-    <hr>
-    <div class="cryptoTable">
-      <div class="row crypto-grid " >
-        <div class="col-sm-6 col-md-6">
-          crypto
-        </div>
-        <div class="col-sm-6 col-md-6">
-          Cantidad
-        </div>        
-      </div>
-      <div class="row crypto-grid" *ngFor="let crypto of userCryptos" >
-        <div class="col-sm-6 col-md-6">
-          {{crypto.name}}
-        </div>
-        <div class="col-sm-6 col-md-6">
-          {{crypto.quantity}}
-        </div>        
-      </div>
-    </div>
+   
     
-    <hr>
+    
 
     <div class="movementTable">
       
       <div class="row movement-grid">
-        <div class="col-sm-3">Fecha</div>
-        <div class="col-sm-3">Moneda Inicial</div>
-        <div class="col-sm-3">Moneda Final</div>
-        <div class="col-sm-3">Monto</div>
+        <div class="col-sm-4">Monto</div>
+        <div class="col-sm-4">Operacion</div>        
+        <div class="col-sm-4">Fecha</div>
       </div>
-      <div class="row movement-grid" *ngFor="let movement of userMovements">
-        <div class="col-sm-3">{{movement.fecha}}</div>
-        <div class="col-sm-3">{{movement.desde}}</div>
-        <div class="col-sm-3">{{movement.hacia}}</div>
-        <div class="col-sm-3">{{movement.monto_de_origen}}</div>
+      <div class="row movement-grid" *ngFor="let movimiento of movimientos">
+        <div class="col-sm-4">${{movimiento.monto}}</div>
+        <div class="col-sm-4">{{movimiento.operacion}}</div>
+        <div class="col-sm-4">{{movimiento.fecha}}</div>
       </div>
     
     </div>

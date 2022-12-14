@@ -31,7 +31,7 @@ namespace backend.Controllers
                 newMov.IdBilleteras = mov.IdBilletera;
                 newMov.Monto = mov.Monto;
                 newMov.Operacion = mov.Operacion;
-
+                newMov.Fecha = mov.Fecha;
                 try
                 {
                     Billetera? billetera = db.Billeteras.FirstOrDefault(a => a.IdBilleteras == idBilletera);

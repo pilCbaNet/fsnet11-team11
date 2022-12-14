@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable} from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Usuario } from '../interfaces/user-interface';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class LoginService {
   currentUserSubject: BehaviorSubject<Usuario>;
   currentUser: Observable<Usuario>; 
 
-  constructor(private miServicioLogin: HttpClient) {
+  constructor(private miServicioLogin: HttpClient,private router: Router) {
       this.url = "https://localhost:7034/api/usuarios";
       this.currentUserSubject = new BehaviorSubject<Usuario>(JSON.parse(sessionStorage.getItem("currentUser")||"{}"));
       this.currentUser = this.currentUserSubject.asObservable();
@@ -33,8 +34,10 @@ export class LoginService {
   }  
   
   cerrarSesion():void{
-    sessionStorage.removeItem("currentItem");
+    sessionStorage.removeItem("currentUser");
+    sessionStorage.removeItem("userMovements");
     this.loggedIn.next(false)
+    this.router.navigate([""])
   }
 
   get usuarioAutenticado(): Usuario {

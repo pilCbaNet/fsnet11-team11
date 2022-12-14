@@ -12,7 +12,8 @@ namespace _0_DTO
             public long Monto { get; set; }
             public string Operacion { get; set; }
             public long IdBilletera { get; set; }
-        }
+        public DateTime Fecha { get; set; }
+    }
     
     
 }
