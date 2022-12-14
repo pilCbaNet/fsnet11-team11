@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\FRAN\\fsnet11-team11\\Backend\\backend\\backend.csproj": {}
+    "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\backend\\backend.csproj": {}
   },
   "projects": {
-    "C:\\FRAN\\fsnet11-team11\\Backend\\0-DTO\\0-DTO.csproj": {
+    "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\0-DTO\\0-DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\FRAN\\fsnet11-team11\\Backend\\0-DTO\\0-DTO.csproj",
+        "projectUniqueName": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\0-DTO\\0-DTO.csproj",
         "projectName": "0-DTO",
-        "projectPath": "C:\\FRAN\\fsnet11-team11\\Backend\\0-DTO\\0-DTO.csproj",
-        "packagesPath": "C:\\Users\\Moreniski\\.nuget\\packages\\",
-        "outputPath": "C:\\FRAN\\fsnet11-team11\\Backend\\0-DTO\\obj\\",
+        "projectPath": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\0-DTO\\0-DTO.csproj",
+        "packagesPath": "C:\\Users\\Sunph\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\0-DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Moreniski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sunph\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,21 +55,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\FRAN\\fsnet11-team11\\Backend\\backend\\backend.csproj": {
+    "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\FRAN\\fsnet11-team11\\Backend\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\FRAN\\fsnet11-team11\\Backend\\backend\\backend.csproj",
-        "packagesPath": "C:\\Users\\Moreniski\\.nuget\\packages\\",
-        "outputPath": "C:\\FRAN\\fsnet11-team11\\Backend\\backend\\obj\\",
+        "projectPath": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\backend\\backend.csproj",
+        "packagesPath": "C:\\Users\\Sunph\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Moreniski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sunph\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,11 +83,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\FRAN\\fsnet11-team11\\Backend\\0-DTO\\0-DTO.csproj": {
-                "projectPath": "C:\\FRAN\\fsnet11-team11\\Backend\\0-DTO\\0-DTO.csproj"
+              "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\0-DTO\\0-DTO.csproj": {
+                "projectPath": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\0-DTO\\0-DTO.csproj"
               },
-              "C:\\FRAN\\fsnet11-team11\\Backend\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\FRAN\\fsnet11-team11\\Backend\\Entities\\Entities.csproj"
+              "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\Entities\\Entities.csproj"
               }
             }
           }
@@ -140,21 +140,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\FRAN\\fsnet11-team11\\Backend\\Entities\\Entities.csproj": {
+    "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\FRAN\\fsnet11-team11\\Backend\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\FRAN\\fsnet11-team11\\Backend\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Moreniski\\.nuget\\packages\\",
-        "outputPath": "C:\\FRAN\\fsnet11-team11\\Backend\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Sunph\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sunph\\Documents\\Bizit\\PIL\\Backend\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Moreniski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sunph\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -201,7 +201,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

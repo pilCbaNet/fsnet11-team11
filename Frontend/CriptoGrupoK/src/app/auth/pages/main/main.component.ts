@@ -15,9 +15,9 @@ saldo:any;
   @ViewChild("navegationBar",{static:false}) value! : ElementRef;
 
   ngOnInit(): void {
-    this.getSaldo.obtenerDataClient().subscribe(data=>{
-      this.saldo=data.users[0].wallet.usd;
-    })
+    // this.getSaldo.obtenerDataClient().subscribe(data=>{
+    //   this.saldo=data.users[0].wallet.usd;
+    // })
 
   }
 

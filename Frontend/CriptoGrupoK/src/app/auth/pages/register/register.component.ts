@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UserInterface } from 'src/app/interfaces/user-interface';
 import { CryptosInterface } from 'src/app/interfaces/cryptos-interface'
-import { CompraServiceService } from 'src/app/services/compra-service.service';
 import {FormBuilder,FormGroup,Validators} from '@angular/forms';  
 import { Router } from '@angular/router';
+import { RegisterService } from 'src/app/services/register.service';
 
 @Component({
   selector: 'app-register',
@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   validPass:Boolean = true;
 
 
-  constructor(private agregarCliente : CompraServiceService,public fb: FormBuilder,private router: Router) { 
+  constructor(private crearUsuario : RegisterService,public fb: FormBuilder,private router: Router) { 
     this.loginForm = this.fb.group({
       loginName: ["",[Validators.required]],
       loginDate: ["",[Validators.required]],
@@ -34,10 +34,10 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void { 
-    this.agregarCliente.obtenerDataClient().subscribe(data =>{ 
-      this.users = data.users;
-      this.crypto = data.crypto;
-    });  
+    // this.agregarCliente.obtenerDataClient().subscribe(data =>{ 
+    //   this.users = data.users;
+    //   this.crypto = data.crypto;
+    // });  
   }
 
   
@@ -63,16 +63,7 @@ export class RegisterComponent implements OnInit {
     return this.LoginRPass?.touched && this.LoginRPass?.invalid;
   }
   
-//  ageCheck(){
-//   let years = new Date(this.LoginDate?.value+":00:00:00")
-//   let now = new Date()
-  
-  
-//   if( years.getFullYear() - now.getFullYear() <18){
-//     this.LoginDate?.setErrors({ minor: true });
-//     this.LoginDate?.markAsTouched();
-//   }
-//  }
+
 
   submit(){
 
@@ -89,52 +80,40 @@ export class RegisterComponent implements OnInit {
     
 
     if(this.loginForm.valid){
-      let newUser = deepCopy(this.users[0])
-      newUser.info.email = this.loginForm.value.loginMail!
-      newUser.info.password = this.loginForm.value.loginPass!
-      this.users.push(newUser)
+      // let newUser = deepCopy(this.users[0])
+      // newUser.info.email = this.loginForm.value.loginMail!
+      // newUser.info.password = this.loginForm.value.loginPass!
+      // this.users.push(newUser)
   
-      let newData = {users:this.users,crypto:this.crypto}
+      // let newData = {users:this.users,crypto:this.crypto}
       
-      this.agregarCliente.actualizarDataCliente(newData).subscribe(data=>{
-      this.router.navigate(["login"])     
-      })
+      // this.agregarCliente.actualizarDataCliente(newData).subscribe(data=>{
+      // this.router.navigate(["login"])     
+      // })
+
+      try{
+        this.crearUsuario.crearUsuario({
+          mail:this.LoginMail?.value,
+          contraseña: this.LoginPass?.value,
+          apenom:this.LoginName?.value,
+          fecha:this.LoginDate?.value,
+          document:11111111
+        }).subscribe(a=>{
+          console.log(a)
+          if(a==true)this.router.navigate(["login"])
+           else alert("El usuario no pudo ser creado por favor revise la informacion proporcionada")
+        })
+      }catch(e){
+        console.log(e)
+      }
+     
     }
     
   }
 
 }
 
-function deepCopy<T>(instance : T) : T {
-  if ( instance == null){
-      return instance;
-  }
 
-  // handle Dates
-  if (instance instanceof Date) {
-      return new Date(instance.getTime()) as any;
-  }
-
-  // handle Array types
-  if (instance instanceof Array){
-      var cloneArr = [] as any[];
-      (instance as any[]).forEach((value)  => {cloneArr.push(value)});
-      // for nested objects
-      return cloneArr.map((value: any) => deepCopy<any>(value)) as any;
-  }
-  // handle objects
-  if (instance instanceof Object) {
-      var copyInstance = { ...(instance as { [key: string]: any }
-      ) } as { [key: string]: any };
-      for (var attr in instance) {
-          if ( (instance as Object).hasOwnProperty(attr)) 
-              copyInstance[attr] = deepCopy<any>(instance[attr]);
-      }
-      return copyInstance as T;
-  }
-  // handling primitive data types
-  return instance;
-}
 
 function ConfirmedValidator(controlName: string, matchingControlName: string,date:string){
   return (formGroup: FormGroup) => {

@@ -10,3 +10,15 @@ C:\FRAN\fsnet11-team11\Backend\0-DTO\obj\Debug\net6.0\0-DTO.dll
 C:\FRAN\fsnet11-team11\Backend\0-DTO\obj\Debug\net6.0\refint\0-DTO.dll
 C:\FRAN\fsnet11-team11\Backend\0-DTO\obj\Debug\net6.0\0-DTO.pdb
 C:\FRAN\fsnet11-team11\Backend\0-DTO\obj\Debug\net6.0\ref\0-DTO.dll
+C:\Users\Sunph\Documents\Bizit\PIL\Backend\0-DTO\bin\Debug\net6.0\0-DTO.deps.json
+C:\Users\Sunph\Documents\Bizit\PIL\Backend\0-DTO\bin\Debug\net6.0\0-DTO.dll
+C:\Users\Sunph\Documents\Bizit\PIL\Backend\0-DTO\bin\Debug\net6.0\0-DTO.pdb
+C:\Users\Sunph\Documents\Bizit\PIL\Backend\0-DTO\obj\Debug\net6.0\0-DTO.csproj.AssemblyReference.cache
+C:\Users\Sunph\Documents\Bizit\PIL\Backend\0-DTO\obj\Debug\net6.0\0-DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sunph\Documents\Bizit\PIL\Backend\0-DTO\obj\Debug\net6.0\0-DTO.AssemblyInfoInputs.cache
+C:\Users\Sunph\Documents\Bizit\PIL\Backend\0-DTO\obj\Debug\net6.0\0-DTO.AssemblyInfo.cs
+C:\Users\Sunph\Documents\Bizit\PIL\Backend\0-DTO\obj\Debug\net6.0\0-DTO.csproj.CoreCompileInputs.cache
+C:\Users\Sunph\Documents\Bizit\PIL\Backend\0-DTO\obj\Debug\net6.0\0-DTO.dll
+C:\Users\Sunph\Documents\Bizit\PIL\Backend\0-DTO\obj\Debug\net6.0\refint\0-DTO.dll
+C:\Users\Sunph\Documents\Bizit\PIL\Backend\0-DTO\obj\Debug\net6.0\0-DTO.pdb
+C:\Users\Sunph\Documents\Bizit\PIL\Backend\0-DTO\obj\Debug\net6.0\ref\0-DTO.dll

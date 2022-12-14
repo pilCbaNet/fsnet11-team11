@@ -8,19 +8,30 @@ import { Observable } from 'rxjs';
 export class CompraServiceService {
 
   url!:String;
+  
   constructor(private miServicioCompraService: HttpClient) {
-      this.url = "http://localhost:3000/";
+      this.url = "https://localhost:7034/api/billetera/";     
    }
 
-   obtenerDataClient(): Observable<any> {
-      return this.miServicioCompraService.get(
-        this.url + "data"
-      );
-   }  
- 
-   actualizarDataCliente(postData: Object): Observable<any> {
-    return this.miServicioCompraService.put(
-      this.url + "data",postData
+   obtenerDataClient(id:string): Observable<any> {
+    
+    return this.miServicioCompraService.get(
+      this.url + id
     );
  }  
+ 
+ depositoClient(id:string,data:any): Observable<any> {
+    
+  return this.miServicioCompraService.put(
+    this.url + id, data
+  );
+}  
+
+retiroClient(id:string,data:any): Observable<any> {
+    
+  return this.miServicioCompraService.put(
+    this.url + id, data
+  );
+}  
+   
 }

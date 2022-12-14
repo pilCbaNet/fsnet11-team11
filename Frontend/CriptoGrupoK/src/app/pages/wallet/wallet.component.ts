@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CryptosInterface } from 'src/app/interfaces/cryptos-interface';
 import { UserInterface } from 'src/app/interfaces/user-interface';
 import { CompraServiceService } from 'src/app/services/compra-service.service';
+import { LoginService } from 'src/app/services/login.service';
 
 
 @Component({
@@ -11,6 +12,7 @@ import { CompraServiceService } from 'src/app/services/compra-service.service';
   styleUrls: ['./wallet.component.css']
 })
 export class WalletComponentComponent implements OnInit {
+  idBilletera!:string;
   data:any;
   userCryptos: any;
   userMovements:any;
@@ -27,7 +29,7 @@ export class WalletComponentComponent implements OnInit {
   }
 
 
-  constructor(private miServicioWallet: CompraServiceService,public fb: FormBuilder) {
+  constructor(private miServicioCompraService: CompraServiceService,public fb: FormBuilder,private userService: LoginService) {
 
     this.transactionForm = this.fb.group({
       usd:["",[Validators.required]],
@@ -37,11 +39,8 @@ export class WalletComponentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.miServicioWallet.obtenerDataClient().subscribe((data) => {      
-           
-     this.dataActualization(data)
-      
-    });
+    this.saldo = this.userService.usuarioAutenticado.billeteras[0].saldo;
+    this.idBilletera = this.userService.usuarioAutenticado.billeteras[0].idBilleteras.toString();
   }
   
     
@@ -78,32 +77,39 @@ get Transaction(){
 
     if(this.transactionForm.valid){
       if(transaction === "Retiro"){
-        if(this.transactionForm.value.usd > this.user.wallet.usd){
+        if(this.transactionForm.value.usd > this.saldo){
           alert("El saldo es insuficiente.")
           return
         }
-        this.data.users.find((c:any)=>c.info.email === this.user.info.email).wallet.usd -= usd;
-        this.movement.desde="Mi cuenta"
-        this.movement.hacia="Retiro"
-        this.movement.monto_de_destino=usd
-        this.movement.monto_de_origen=usd
-        this.movement.fecha = new Date().getDay()+"/"+new Date().getMonth()+"/"+new Date().getFullYear()
-        this.data.users.find((c:any)=>c.info.email === this.user.info.email).movements.push(this.movement)
+        this.miServicioCompraService.retiroClient(this.idBilletera,{
+          monto: usd,
+          operacion: "retiro",
+          idBilletera: this.idBilletera
+        }).subscribe(data=>{
+          this.miServicioCompraService.obtenerDataClient(this.idBilletera).subscribe(data=>{      
+            this.saldo = data
+            console.log(this.saldo)
+          })
+        })
       }
       if(transaction === "Deposito" ){
-        this.data.users.find((c:any)=>c.info.email === this.user.info.email).wallet.usd += usd;
-        this.movement.desde="Deposito"
-        this.movement.hacia="Mi cuenta"
-        this.movement.monto_de_destino=usd
-        this.movement.monto_de_origen=usd
-        this.movement.fecha = new Date().getDay()+"/"+new Date().getMonth()+"/"+new Date().getFullYear()
-        this.data.users.find((c:any)=>c.info.email === this.user.info.email).movements.push(this.movement)
+        console.log(this.idBilletera)
+        this.miServicioCompraService.depositoClient(this.idBilletera,{
+          monto: usd,
+          operacion: "ingreso",
+          idBilletera: this.idBilletera
+        }).subscribe(data=>{
+          this.miServicioCompraService.obtenerDataClient(this.idBilletera).subscribe(data=>{      
+            this.saldo = data
+            console.log(this.saldo)
+          })
+        })
       }
        
-      this.miServicioWallet.actualizarDataCliente(this.data).subscribe(data=>{
-        alert("La transaccón fue realizada con exito")
-        this.dataActualization(data)
-      })
+      // this.miServicioWallet.actualizarDataCliente(this.data).subscribe(data=>{
+      //   alert("La transaccón fue realizada con exito")
+      //   this.dataActualization(data)
+      // })
     }
   }
  

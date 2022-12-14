@@ -1,8 +1,9 @@
-import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CompraServiceService } from 'src/app/services/compra-service.service';
 import { CryptosInterface } from 'src/app/interfaces/cryptos-interface';
-import { UserInterface } from 'src/app/interfaces/user-interface';
+import { UserInterface} from 'src/app/interfaces/user-interface';
 import {FormBuilder,Validators} from '@angular/forms';  
+import { LoginService } from 'src/app/services/login.service';
 
 
 declare var window: any;
@@ -31,7 +32,15 @@ export class CompraComponent implements OnInit {
     amount:0
   }
 
-  constructor(private miServicioCompra: CompraServiceService, public fb: FormBuilder) {}
+  constructor(private miServicioCompra: CompraServiceService, public fb: FormBuilder,private userService : LoginService) {}
+
+  ngOnInit(): void {
+    //this.userService.usuarioAutenticado
+    this.formModal = new window.bootstrap.Modal(
+      document.getElementById('buyModal')      
+    );
+    
+  }
 
   coinForm = this.fb.group({
     coinName: ['',[Validators.required]],
@@ -59,38 +68,27 @@ export class CompraComponent implements OnInit {
 
   onBuy(){
 
-    if(parseFloat(JSON.stringify(this.users[0].wallet.usd))<parseFloat(JSON.stringify(this.selectedCoin.price))*parseFloat(this.buyForm.value.amountToBuy!)){
-      alert("no tiene suficientes fondos para realizar esa operación")
-      return
-    }
+    // if(parseFloat(JSON.stringify(this.users[0].wallet.usd))<parseFloat(JSON.stringify(this.selectedCoin.price))*parseFloat(this.buyForm.value.amountToBuy!)){
+    //   alert("no tiene suficientes fondos para realizar esa operación")
+    //   return
+    // }
 
-    this.postData = {users:this.users,crypto:this.cryptos};
-    let num: Number;
-    if(this.postData.users[0].wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!= undefined){
-      num = this.postData.users[0].wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!.quantity
-      this.postData.users[0].wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!.quantity = parseFloat(JSON.stringify(num))+parseFloat(this.buyForm.value.amountToBuy!)
-    }
+    // this.postData = {users:this.users,crypto:this.cryptos};
+    // let num: Number;
+    // if(this.postData.users[0].wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!= undefined){
+    //   num = this.postData.users[0].wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!.quantity
+    //   this.postData.users[0].wallet.crypto.find(c=>c.crypto_id == this.selectedCoin.id)!.quantity = parseFloat(JSON.stringify(num))+parseFloat(this.buyForm.value.amountToBuy!)
+    // }
     
-    this.postData.users[0].wallet.usd = parseFloat(JSON.stringify(this.postData.users[0].wallet.usd)) - parseFloat(this.buyForm.value.amountToBuy!)* parseFloat(JSON.stringify(this.selectedCoin.price))
+    // this.postData.users[0].wallet.usd = parseFloat(JSON.stringify(this.postData.users[0].wallet.usd)) - parseFloat(this.buyForm.value.amountToBuy!)* parseFloat(JSON.stringify(this.selectedCoin.price))
     
-    this.usd = this.user.wallet.usd;
+    // this.usd = this.user.wallet.usd;
 
-    this.miServicioCompra.actualizarDataCliente(this.postData).subscribe(data=>console.log(data))
+    // this.miServicioCompra.actualizarDataCliente(this.postData).subscribe(data=>console.log(data))
     this.formModal.hide();
   }
 
-  ngOnInit(): void {
-    this.miServicioCompra.obtenerDataClient().subscribe(data=>{      
-      this.cryptos = data.crypto;
-      this.user = data.users[0];
-      this.users = data.users;
-      this.usd = this.user.wallet.usd
-    })
-    this.formModal = new window.bootstrap.Modal(
-      document.getElementById('buyModal')      
-    );
-    
-  }
+  
   openFormModal() {
     this.formModal.show();
     

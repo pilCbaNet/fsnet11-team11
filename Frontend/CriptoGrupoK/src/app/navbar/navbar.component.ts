@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CompraServiceService } from '../services/compra-service.service';
+import { LoginService } from '../services/login.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -10,12 +11,14 @@ export class NavbarComponent implements OnInit {
 
   usuario!:String;
 
-  constructor(private getUsuario:CompraServiceService) { }
+  constructor(private userService : LoginService) { }
 
   ngOnInit(): void {
-    this.getUsuario.obtenerDataClient().subscribe(data=>{
-      this.usuario = data.users[0].info.name;
-    })
+    
+    this.usuario = this.userService.usuarioAutenticado.apenom;
+     
   }
+
+  
 
 }

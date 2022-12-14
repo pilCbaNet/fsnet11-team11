@@ -15,10 +15,10 @@ export class CryptoListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.miServicioCompra.obtenerDataClient().subscribe(data=>{      
-      this.cryptos = data.crypto;     
+    // this.miServicioCompra.obtenerDataClient().subscribe(data=>{      
+    //   this.cryptos = data.crypto;     
       
-    })
+    // })
   }
 
 }

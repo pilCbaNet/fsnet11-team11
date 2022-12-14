@@ -537,3 +537,5 @@ C:\FRAN\fsnet11-team11\Backend\backend\obj\Debug\net6.0\ref\backend.dll
 C:\FRAN\fsnet11-team11\Backend\backend\bin\Debug\net6.0\0-DTO.dll
 C:\FRAN\fsnet11-team11\Backend\backend\bin\Debug\net6.0\0-DTO.pdb
 C:\FRAN\fsnet11-team11\Backend\backend\obj\Debug\net6.0\backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Sunph\Documents\Bizit\PIL\Backend\backend\bin\Debug\net6.0\0-DTO.dll
+C:\Users\Sunph\Documents\Bizit\PIL\Backend\backend\bin\Debug\net6.0\0-DTO.pdb

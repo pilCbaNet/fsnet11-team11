@@ -30,7 +30,7 @@ namespace cryptoAppAPI.Controllers
 
         // POST api/<usuariosController>
         [HttpPost("register")]
-        public void Post([FromBody] PostUsuarioDto user)
+        public bool Post([FromBody] PostUsuarioDto user)
         {
             using (var db = new cryptoDbContext())
             {
@@ -49,9 +49,11 @@ namespace cryptoAppAPI.Controllers
 
                     db.Usuarios.Add(oUsuario);
                     db.SaveChanges();
+                    return true;
                 }
                 catch (Exception ex) 
                 {
+                    return false;
                     throw;
                 }
                 

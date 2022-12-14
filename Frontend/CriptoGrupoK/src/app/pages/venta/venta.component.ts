@@ -79,18 +79,18 @@ export class VentaComponent implements OnInit {
     
     this.usd = this.user.wallet.usd;
 
-    this.miServicioCompra.actualizarDataCliente(this.postData).subscribe(data=>console.log(data))
+    //this.miServicioCompra.actualizarDataCliente(this.postData).subscribe(data=>console.log(data))
     this.formModal.hide();
   }
 
   ngOnInit(): void {
-    this.miServicioCompra.obtenerDataClient().subscribe(data=>{      
-      this.cryptos = data.crypto;
-      this.user = data.users[0];
-      this.users = data.users;
-      this.usd = this.user.wallet.usd
+    // this.miServicioCompra.obtenerDataClient().subscribe(data=>{      
+    //   this.cryptos = data.crypto;
+    //   this.user = data.users[0];
+    //   this.users = data.users;
+    //   this.usd = this.user.wallet.usd
       
-    })
+    // })
     this.formModal = new window.bootstrap.Modal(
       document.getElementById('buyModal')      
     );
